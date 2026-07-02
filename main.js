@@ -335,29 +335,39 @@ window.addEventListener('load', () => {
   const preloaderContent = document.querySelector('.preloader-content');
   
   if (preloader) {
-    // Full cinematic preloader for all pages
-    setTimeout(() => {
-      if (preloaderContent) {
-        preloaderContent.style.transition = 'opacity 0.4s ease';
-        preloaderContent.style.opacity = '0';
-        setTimeout(() => {
-          preloaderContent.style.display = 'none';
-        }, 400);
-      }
-      
+    if (preloader.classList.contains('transition-only')) {
+      // Transition-only preloader for subpages: Swipe up immediately
       setTimeout(() => {
-        if (signature) {
-          signature.classList.add('show');
-          signature.classList.add('draw');
+        preloader.classList.add('hidden');
+        setTimeout(() => {
+          preloader.style.display = 'none';
+        }, 1200);
+      }, 300);
+    } else {
+      // Full cinematic preloader for home page
+      setTimeout(() => {
+        if (preloaderContent) {
+          preloaderContent.style.transition = 'opacity 0.4s ease';
+          preloaderContent.style.opacity = '0';
+          setTimeout(() => {
+            preloaderContent.style.display = 'none';
+          }, 400);
         }
         
         setTimeout(() => {
-          preloader.classList.add('hidden');
+          if (signature) {
+            signature.classList.add('show');
+            signature.classList.add('draw');
+          }
+          
           setTimeout(() => {
-            preloader.style.display = 'none';
-          }, 1200);
-        }, 1800);
-      }, 600);
-    }, 2400);
+            preloader.classList.add('hidden');
+            setTimeout(() => {
+              preloader.style.display = 'none';
+            }, 1200);
+          }, 1800);
+        }, 600);
+      }, 2400);
+    }
   }
 });

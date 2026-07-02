@@ -1680,9 +1680,13 @@ body.no-scroll.light-nav-page .hamburger::after { background: #FFFFFF !important
   transform: translateY(-100%);
 }
 
-/* Minimal Preloader for Subpages - Removed minimal overrides */
-.preloader {
+/* Minimal Transition-Only Preloader for Subpages */
+.preloader.transition-only {
   background-color: var(--accent);
+}
+.preloader.transition-only .preloader-content,
+.preloader.transition-only .preloader-signature-container {
+  display: none !important;
 }
 .preloader.minimal .preloader-line {
   background-color: rgba(15, 23, 42, 0.05);
@@ -1691,13 +1695,13 @@ body.no-scroll.light-nav-page .hamburger::after { background: #FFFFFF !important
   background-color: var(--accent);
   animation: loadLine 1.2s cubic-bezier(0.77, 0, 0.175, 1) 0.2s forwards;
 }
-.preloader .preloader-logo {
+.preloader-logo {
   height: 50px;
   width: auto;
   opacity: 0;
   animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
 }
-.preloader .preloader-line {
+.preloader-line {
   width: 200px;
   height: 1px;
   background-color: rgba(255, 255, 255, 0.15);
@@ -1705,7 +1709,7 @@ body.no-scroll.light-nav-page .hamburger::after { background: #FFFFFF !important
   opacity: 0;
   animation: fadeIn 0.5s ease 0.6s forwards;
 }
-.preloader .preloader-text {
+.preloader-text {
   display: flex;
   gap: 0.5rem;
   font-family: var(--font-display);
@@ -1713,6 +1717,13 @@ body.no-scroll.light-nav-page .hamburger::after { background: #FFFFFF !important
   letter-spacing: 3px;
   color: #fff;
 }
+.preloader-text span {
+  opacity: 0;
+  transform: translateY(15px);
+}
+.preloader-text span:nth-child(1) { animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.2s forwards; }
+.preloader-text span:nth-child(2) { animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.4s forwards; }
+.preloader-text span:nth-child(3) { animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.6s forwards; }
 .preloader.slide-in {
   transform: translateY(100%);
   transition: none;
