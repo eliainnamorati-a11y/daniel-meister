@@ -335,39 +335,39 @@ window.addEventListener('load', () => {
   const preloaderContent = document.querySelector('.preloader-content');
   
   if (preloader) {
-    // Wait for the logo, line, and text animations to complete
-    setTimeout(() => {
-      
-      // Completely fade out and hide the initial preloader content
-      if (preloaderContent) {
-        preloaderContent.style.transition = 'opacity 0.4s ease';
-        preloaderContent.style.opacity = '0';
-        
-        // Remove from layout so it doesn't interfere
-        setTimeout(() => {
-          preloaderContent.style.display = 'none';
-        }, 400);
-      }
-      
-      // Wait for it to completely disappear, THEN show the signature ALONE
+    if (preloader.classList.contains('minimal')) {
+      // Minimal preloader for subpages: Faster, no signature
       setTimeout(() => {
-        if (signature) {
-          signature.classList.add('show');
-          signature.classList.add('draw');
+        preloader.classList.add('hidden');
+        setTimeout(() => {
+          preloader.style.display = 'none';
+        }, 1200);
+      }, 1500);
+    } else {
+      // Full cinematic preloader for home page
+      setTimeout(() => {
+        if (preloaderContent) {
+          preloaderContent.style.transition = 'opacity 0.4s ease';
+          preloaderContent.style.opacity = '0';
+          setTimeout(() => {
+            preloaderContent.style.display = 'none';
+          }, 400);
         }
         
-        // Wait for signature to display (1.5s) plus small pause
         setTimeout(() => {
-          preloader.classList.add('hidden');
+          if (signature) {
+            signature.classList.add('show');
+            signature.classList.add('draw');
+          }
           
-          // Remove from DOM flow after transition
           setTimeout(() => {
-            preloader.style.display = 'none';
-          }, 1200);
-        }, 1800);
-        
-      }, 600); // 0.6s delay creates the "all of it disappears" effect
-      
-    }, 2400);
+            preloader.classList.add('hidden');
+            setTimeout(() => {
+              preloader.style.display = 'none';
+            }, 1200);
+          }, 1800);
+        }, 600);
+      }, 2400);
+    }
   }
 });
