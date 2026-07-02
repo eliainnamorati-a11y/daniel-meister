@@ -68,24 +68,41 @@
     <!-- About Me Section -->
     <section id="about" class="about" style="padding-top: 1rem;">
       <div class="section-container">
-        <div class="about-content" style="display: flex !important; flex-direction: column !important; align-items: center !important; text-align: center !important; max-width: 800px !important; margin: 0 auto !important; padding: 0 0 4rem 0 !important; gap: 3rem !important;">
-          <div class="about-image" style="width: 100%; max-width: 450px; margin: 0 auto;">
-            <img src="images/wer%20bin%20ich.jpg" alt="Daniel Meister" />
-            <div style="margin-top: 1.5rem; text-align: center; color: var(--text-muted); background: #FFFFFF; padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(0,0,0,0.06);">
-              <h3 style="color: var(--primary); font-size: 1.4rem; margin-bottom: 0.3rem;">Daniel Alexander Meister</h3>
-              <p style="font-size: 1.1rem; margin-bottom: 1rem; color: var(--text-muted);">Geboren am 7. Januar 1998</p>
-              <div style="border-top: 1px solid rgba(0,0,0,0.1); padding-top: 1rem;">
-                <p style="font-weight: 500; color: var(--primary); margin-bottom: 0.6rem; font-size: 1.05rem;">Landrat (NW) 2026-2030</p>
-                <p style="font-weight: 500; color: var(--primary); margin-bottom: 0.6rem; font-size: 1.05rem;">Präsident der SVP Ennetbürgen</p>
-                <p style="font-weight: 500; color: var(--primary); margin-bottom: 0.2rem; font-size: 1.05rem;">Kantonal Vorstand SVP Nidwalden (Finanzen)</p>
-                <div style="margin-top: 1.5rem;">
-                  <img src="SVP_NW_Favicon.png" alt="SVP Nidwalden" style="height: 60px; width: auto; object-fit: contain;">
-                </div>
-              </div>
+        <div class="about-content" style="display: grid; grid-template-columns: 1fr 1fr; align-items: center; max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; gap: 4rem;">
+          <!-- Left: Headshot -->
+          <div class="about-image scroll-reveal" style="width: 100%;">
+            <div style="position: relative; border-radius: 24px; overflow: hidden; aspect-ratio: 4/5;">
+              <img src="images/wer%20bin%20ich.jpg" alt="Daniel Meister" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div style="margin-top: 1.5rem; text-align: center; background: #F8FAFC; padding: 1.5rem; border-radius: 16px; border: 1px solid rgba(0,0,0,0.05);">
+              <h3 style="color: var(--primary); font-size: 1.3rem; margin-bottom: 0.2rem;">Daniel Alexander Meister</h3>
+              <p style="font-size: 1rem; color: var(--text-muted);">Geboren am 7. Januar 1998</p>
             </div>
           </div>
-          <div class="about-text" style="width: 100%;">
-            <p style="font-family: var(--font-display); font-style: italic; font-size: 2.5rem; color: var(--primary); line-height: 1.3;"><span class="scroll-reveal">„Heute lebe und arbeite ich in Nidwalden – einem Ort, der für mich Heimat, Verantwortung und Zukunft bedeutet.“</span></p>
+
+          <!-- Right: Information -->
+          <div class="about-text scroll-reveal" style="text-align: left;">
+            <p style="font-family: var(--font-display); font-style: italic; font-size: 2.8rem; color: var(--primary); line-height: 1.2; margin-bottom: 3rem;">
+              «Heute lebe und arbeite ich in Nidwalden – einem Ort, der für mich Heimat, Verantwortung und Zukunft bedeutet.»
+            </p>
+            
+            <div style="display: flex; flex-direction: column; gap: 1.2rem; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 2rem;">
+              <p style="font-weight: 500; color: var(--primary); font-size: 1.1rem; display: flex; align-items: center; gap: 1rem;">
+                <span style="width: 8px; height: 8px; background: var(--accent); border-radius: 50%;"></span>
+                Landrat (NW) 2026-2030
+              </p>
+              <p style="font-weight: 500; color: var(--primary); font-size: 1.1rem; display: flex; align-items: center; gap: 1rem;">
+                <span style="width: 8px; height: 8px; background: var(--accent); border-radius: 50%;"></span>
+                Präsident der SVP Ennetbürgen
+              </p>
+              <p style="font-weight: 500; color: var(--primary); font-size: 1.1rem; display: flex; align-items: center; gap: 1rem;">
+                <span style="width: 8px; height: 8px; background: var(--accent); border-radius: 50%;"></span>
+                Kantonal Vorstand SVP Nidwalden (Finanzen)
+              </p>
+              <div style="margin-top: 2rem;">
+                <img src="SVP_NW_Favicon.png" alt="SVP Nidwalden" style="height: 50px; width: auto; object-fit: contain;">
+              </div>
+            </div>
           </div>
         </div>
       </div>
