@@ -1682,7 +1682,7 @@ body.no-scroll.light-nav-page .hamburger::after { background: #FFFFFF !important
 
 /* Minimal Preloader for Subpages */
 .preloader.minimal {
-  background-color: #FFFFFF;
+  background-color: var(--primary);
 }
 .preloader.minimal .preloader-line {
   background-color: rgba(15, 23, 42, 0.05);
@@ -1716,7 +1716,7 @@ body.no-scroll.light-nav-page .hamburger::after { background: #FFFFFF !important
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: var(--accent);
+  background-color: var(--primary);
   z-index: 1000000;
   transform: translateY(100%);
   pointer-events: none;
