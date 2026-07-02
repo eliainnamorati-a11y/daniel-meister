@@ -27,28 +27,24 @@ menuLinks.forEach(link => {
   });
 });
 
-// Handle Page Transitions (Swipe Up)
+// Handle Page Transitions (Simple Swipe Up)
 function handlePageTransition(url) {
-  const preloader = document.querySelector('.preloader');
-  if (!preloader) {
-    window.location.href = url;
-    return;
+  let curtain = document.querySelector('.transition-curtain');
+  if (!curtain) {
+    curtain = document.createElement('div');
+    curtain.className = 'transition-curtain';
+    document.body.appendChild(curtain);
   }
 
-  // Reset preloader for swipe up
-  preloader.style.transition = 'none';
-  preloader.classList.remove('hidden');
-  preloader.classList.add('slide-in');
-  
   // Force reflow
-  preloader.offsetHeight;
+  curtain.offsetHeight;
   
   // Trigger slide up
-  preloader.classList.add('active');
+  curtain.classList.add('active');
   
   setTimeout(() => {
     window.location.href = url;
-  }, 700); // Matches the CSS transition duration
+  }, 600); // Matches the new CSS transition duration
 }
 
 // Intercept Nav Links for Transition
