@@ -64,9 +64,17 @@ a {
   height: 90px;
   padding: 0 2rem;
   z-index: 100;
-  transition: all 0.4s ease;
+  transition: all 0.4s ease, transform 1s cubic-bezier(0.16, 1, 0.3, 1), opacity 1s ease;
   background: transparent;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  /* Initial state for loading effect */
+  transform: translateY(-30px);
+  opacity: 0;
+}
+
+body.reveal-content .main-nav {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .main-nav.scrolled {
@@ -285,6 +293,15 @@ a {
   width: 100%;
   z-index: 10;
   padding: 5rem 2rem 0 2rem;
+  /* Entrance animation state */
+  transform: translateY(40px);
+  opacity: 0;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s, opacity 1.2s ease 0.3s;
+}
+
+body.reveal-content .hero-content {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .hero-title {
@@ -1516,8 +1533,8 @@ body.no-scroll .main-nav .logo-red {
 }
 .story-cards-container {
   width: 100%;
-  height: calc(100vh - 80px);
-  margin-top: 80px;
+  height: 100%;
+  margin-top: 0;
   position: relative;
 }
 .story-card {
@@ -1643,22 +1660,24 @@ body.no-scroll.light-nav-page .hamburger::after { background: #FFFFFF !important
 
 /* Story Card Icons Animation */
 .story-card .card-icon {
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
-  margin-bottom: 1.5rem;
+  margin-right: 1.5rem;
+  margin-bottom: 0;
   opacity: 0;
-  transform: translateY(30px) scale(0.9);
-  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateX(-30px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .story-card.active .card-icon {
   opacity: 1;
-  transform: translateY(0) scale(1);
+  transform: translateX(0);
 }
 @media (min-width: 768px) {
   .story-card .card-icon {
-    width: 140px;
-    height: 140px;
+    width: 80px;
+    height: 80px;
+    margin-right: 2rem;
   }
 }
 
@@ -1683,6 +1702,7 @@ body.no-scroll.light-nav-page .hamburger::after { background: #FFFFFF !important
 /* Minimal Transition-Only Preloader for Subpages */
 .preloader.transition-only {
   background-color: var(--accent);
+  transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
 }
 .preloader.transition-only .preloader-content {
   display: none !important;
@@ -1829,7 +1849,7 @@ body.no-scroll.light-nav-page .hamburger::after { background: #FFFFFF !important
 }
 
 .preloader-signature-container.draw {
-  animation: drawSignature 1.5s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+  animation: drawSignature 1.0s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
 }
 
 @keyframes drawSignature {

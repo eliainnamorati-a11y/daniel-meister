@@ -345,11 +345,12 @@ window.addEventListener('load', () => {
         
         setTimeout(() => {
           preloader.classList.add('hidden');
+          document.body.classList.add('reveal-content');
           setTimeout(() => {
             preloader.style.display = 'none';
-          }, 1200);
-        }, 1200); // Give the signature 1.2s to draw
-      }, 200);
+          }, 800);
+        }, 800); // Give the signature 0.8s to draw
+      }, 100);
     } else {
       // Full cinematic preloader for home page
       setTimeout(() => {
@@ -369,6 +370,7 @@ window.addEventListener('load', () => {
           
           setTimeout(() => {
             preloader.classList.add('hidden');
+            document.body.classList.add('reveal-content');
             setTimeout(() => {
               preloader.style.display = 'none';
             }, 1200);
