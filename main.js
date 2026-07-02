@@ -373,8 +373,8 @@ window.addEventListener('load', () => {
             document.body.classList.add('reveal-content');
             setTimeout(() => {
               preloader.style.display = 'none';
-            }, 1200);
-          }, 1800);
+            }, 800);
+          }, 1200);
         }, 600);
       }, 2400);
     }
