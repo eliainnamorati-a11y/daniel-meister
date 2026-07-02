@@ -336,13 +336,13 @@ window.addEventListener('load', () => {
   
   if (preloader) {
     if (preloader.classList.contains('minimal')) {
-      // Minimal preloader for subpages: Faster, no signature
+      // Minimal preloader for subpages: Immediate swipe away
       setTimeout(() => {
         preloader.classList.add('hidden');
         setTimeout(() => {
           preloader.style.display = 'none';
         }, 1200);
-      }, 1500);
+      }, 300);
     } else {
       // Full cinematic preloader for home page
       setTimeout(() => {

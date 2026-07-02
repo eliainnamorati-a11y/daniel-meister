@@ -1691,14 +1691,14 @@ body.no-scroll.light-nav-page .hamburger::after { background: #FFFFFF !important
   background-color: var(--accent);
   animation: loadLine 1.2s cubic-bezier(0.77, 0, 0.175, 1) 0.2s forwards;
 }
-.preloader.minimal .preloader-text {
-  color: var(--primary);
-  font-size: 0.8rem;
-  letter-spacing: 4px;
-}
 .preloader.minimal .preloader-logo {
-  filter: brightness(0); /* Black logo for white background */
-  height: 40px;
+  display: none;
+}
+.preloader.minimal .preloader-line {
+  display: none;
+}
+.preloader.minimal .preloader-text {
+  display: none;
 }
 .preloader.slide-in {
   transform: translateY(100%);
