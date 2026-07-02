@@ -1684,9 +1684,11 @@ body.no-scroll.light-nav-page .hamburger::after { background: #FFFFFF !important
 .preloader.transition-only {
   background-color: var(--accent);
 }
-.preloader.transition-only .preloader-content,
-.preloader.transition-only .preloader-signature-container {
+.preloader.transition-only .preloader-content {
   display: none !important;
+}
+.preloader.transition-only .preloader-signature-container {
+  display: block !important;
 }
 .preloader.minimal .preloader-line {
   background-color: rgba(15, 23, 42, 0.05);

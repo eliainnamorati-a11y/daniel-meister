@@ -336,13 +336,20 @@ window.addEventListener('load', () => {
   
   if (preloader) {
     if (preloader.classList.contains('transition-only')) {
-      // Transition-only preloader for subpages: Swipe up immediately
+      // Transition-only preloader for subpages: Show signature ONLY
       setTimeout(() => {
-        preloader.classList.add('hidden');
+        if (signature) {
+          signature.classList.add('show');
+          signature.classList.add('draw');
+        }
+        
         setTimeout(() => {
-          preloader.style.display = 'none';
-        }, 1200);
-      }, 300);
+          preloader.classList.add('hidden');
+          setTimeout(() => {
+            preloader.style.display = 'none';
+          }, 1200);
+        }, 1200); // Give the signature 1.2s to draw
+      }, 200);
     } else {
       // Full cinematic preloader for home page
       setTimeout(() => {
