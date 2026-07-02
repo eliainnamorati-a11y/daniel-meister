@@ -1571,48 +1571,52 @@ body.no-scroll .main-nav .logo-red {
 
 @media (max-width: 768px) {
   .story-wrapper {
-    height: 1700vh; /* Keep 100vh per card or adjust if cards are taller */
+    height: auto !important; /* Natural height on mobile */
+    padding-bottom: 5rem;
   }
   .story-sticky {
-    top: 60px;
-    height: calc(100vh - 60px);
+    position: relative !important;
+    height: auto !important;
+    top: 0 !important;
+    overflow: visible !important;
+  }
+  .story-ruler-container {
+    position: sticky !important;
+    top: 60px !important;
+    height: 70px !important;
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  }
+  .story-cards-container {
+    position: relative !important;
+    height: auto !important;
+    margin-top: 0 !important;
   }
   .story-card {
-    flex-direction: column;
-    padding: 2rem 1.5rem;
-    justify-content: center;
+    position: relative !important;
+    height: auto !important;
+    transform: none !important;
+    opacity: 1 !important;
+    padding: 4rem 1.5rem !important;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    background: #FFFFFF !important;
+    visibility: visible !important;
+    display: block !important;
   }
   .story-card-left {
-    padding: 0;
-    flex: 0 0 auto;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
   }
   .story-title { 
-    font-size: 2.2rem; 
-    text-align: left;
-    width: 100%;
+    font-size: 2rem; 
     line-height: 1.2;
   }
-  .story-card-right {
-    padding: 0;
-    flex: 0 0 auto;
-    align-items: flex-start;
-  }
   .story-subtitle {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin-bottom: 1rem;
   }
   .story-text { 
     font-size: 1.05rem; 
-    line-height: 1.5;
-    max-width: 100%;
-  }
-  .story-ruler-container {
-    height: 70px;
-  }
-  .story-cards-container {
-    height: calc(100vh - 70px);
-    margin-top: 70px;
+    line-height: 1.6;
   }
 }
 
