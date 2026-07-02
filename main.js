@@ -299,16 +299,30 @@ document.addEventListener("DOMContentLoaded", () => {
         const yOffset = 100 - (cardProgress * 100);
         card.style.transform = `translate3d(0, ${yOffset}vh, 0)`;
         
-        if (cardProgress > 0.1) {
+        if (cardProgress > 0.05) {
           card.classList.add('active');
         } else {
           card.classList.remove('active');
         }
+
+        // Animate SVG drawing based on progress
+        const paths = card.querySelectorAll('.card-icon path, .card-icon line, .card-icon polyline, .card-icon circle, .card-icon ellipse, .card-icon rect');
+        paths.forEach(path => {
+          const length = 400; // Match CSS dasharray
+          const drawProgress = Math.max(0, Math.min(1, cardProgress * 1.5)); // Accelerate drawing slightly
+          path.style.strokeDashoffset = length * (1 - drawProgress);
+        });
       });
       
-      // Handle the base card (index 0) active state
+      // Handle the base card (index 0) active state and icon drawing
+      const firstCardPaths = cards[0].querySelectorAll('.card-icon path, .card-icon line, .card-icon polyline, .card-icon circle, .card-icon ellipse, .card-icon rect');
       if (progress < 1 / (numCards - 1)) {
         cards[0].classList.add('active');
+        firstCardPaths.forEach(path => {
+          // For the first card, it's drawn when progress is 0
+          // As we scroll towards the second card, it can stay drawn or fade
+          path.style.strokeDashoffset = '0';
+        });
       } else {
         cards[0].classList.remove('active');
       }
