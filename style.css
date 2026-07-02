@@ -1671,19 +1671,23 @@ body.no-scroll.light-nav-page .hamburger::after { background: #FFFFFF !important
 .story-card .card-icon path,
 .story-card .card-icon line,
 .story-card .card-icon polyline,
-.story-card .card-icon circle {
-  stroke-dasharray: 200;
-  stroke-dashoffset: 200;
+.story-card .card-icon circle,
+.story-card .card-icon ellipse,
+.story-card .card-icon rect {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
   transition: stroke-dashoffset 2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 .story-card.active .card-icon {
   opacity: 1;
   transform: translateX(0);
 }
-.story-card.active .card-icon path,
-.story-card.active .card-icon line,
-.story-card.active .card-icon polyline,
-.story-card.active .card-icon circle {
+body.reveal-content .story-card.active .card-icon path,
+body.reveal-content .story-card.active .card-icon line,
+body.reveal-content .story-card.active .card-icon polyline,
+body.reveal-content .story-card.active .card-icon circle,
+body.reveal-content .story-card.active .card-icon ellipse,
+body.reveal-content .story-card.active .card-icon rect {
   stroke-dashoffset: 0;
 }
 @media (min-width: 768px) {
