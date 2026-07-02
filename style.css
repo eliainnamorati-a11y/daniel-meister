@@ -1679,6 +1679,14 @@ body.no-scroll.light-nav-page .hamburger::after { background: #FFFFFF !important
 .preloader.hidden {
   transform: translateY(-100%);
 }
+.preloader.slide-in {
+  transform: translateY(100%);
+  transition: none;
+}
+.preloader.slide-in.active {
+  transform: translateY(0);
+  transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
 .preloader-content {
   display: flex;
   flex-direction: column;

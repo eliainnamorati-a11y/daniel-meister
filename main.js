@@ -14,11 +14,50 @@ if (menuToggle) {
 }
 
 menuLinks.forEach(link => {
-  link.addEventListener('click', () => {
+  link.addEventListener('click', (e) => {
+    const href = link.getAttribute('href');
     // If the link is an anchor on the same page, we toggle the menu immediately.
-    // If it navigates to a new page, it will automatically dismiss as the page reloads.
-    if (link.getAttribute('href').startsWith('#')) {
+    if (href.startsWith('#')) {
       toggleMenu();
+    } else if (!href.startsWith('http') || href.includes(window.location.hostname)) {
+      // Internal link - trigger transition
+      e.preventDefault();
+      handlePageTransition(href);
+    }
+  });
+});
+
+// Handle Page Transitions (Swipe Up)
+function handlePageTransition(url) {
+  const preloader = document.querySelector('.preloader');
+  if (!preloader) {
+    window.location.href = url;
+    return;
+  }
+
+  // Reset preloader for swipe up
+  preloader.style.transition = 'none';
+  preloader.classList.remove('hidden');
+  preloader.classList.add('slide-in');
+  
+  // Force reflow
+  preloader.offsetHeight;
+  
+  // Trigger slide up
+  preloader.classList.add('active');
+  
+  setTimeout(() => {
+    window.location.href = url;
+  }, 700); // Matches the CSS transition duration
+}
+
+// Intercept Nav Links for Transition
+document.querySelectorAll('.nav-links a, .logo, .footer-nav a').forEach(link => {
+  link.addEventListener('click', (e) => {
+    const href = link.getAttribute('href');
+    if (href && !href.startsWith('#') && (!href.startsWith('http') || href.includes(window.location.hostname))) {
+      e.preventDefault();
+      handlePageTransition(href);
     }
   });
 });
