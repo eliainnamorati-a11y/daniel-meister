@@ -335,39 +335,29 @@ window.addEventListener('load', () => {
   const preloaderContent = document.querySelector('.preloader-content');
   
   if (preloader) {
-    if (preloader.classList.contains('minimal')) {
-      // Minimal preloader for subpages: Immediate swipe away
-      setTimeout(() => {
-        preloader.classList.add('hidden');
+    // Full cinematic preloader for all pages
+    setTimeout(() => {
+      if (preloaderContent) {
+        preloaderContent.style.transition = 'opacity 0.4s ease';
+        preloaderContent.style.opacity = '0';
         setTimeout(() => {
-          preloader.style.display = 'none';
-        }, 1200);
-      }, 300);
-    } else {
-      // Full cinematic preloader for home page
+          preloaderContent.style.display = 'none';
+        }, 400);
+      }
+      
       setTimeout(() => {
-        if (preloaderContent) {
-          preloaderContent.style.transition = 'opacity 0.4s ease';
-          preloaderContent.style.opacity = '0';
-          setTimeout(() => {
-            preloaderContent.style.display = 'none';
-          }, 400);
+        if (signature) {
+          signature.classList.add('show');
+          signature.classList.add('draw');
         }
         
         setTimeout(() => {
-          if (signature) {
-            signature.classList.add('show');
-            signature.classList.add('draw');
-          }
-          
+          preloader.classList.add('hidden');
           setTimeout(() => {
-            preloader.classList.add('hidden');
-            setTimeout(() => {
-              preloader.style.display = 'none';
-            }, 1200);
-          }, 1800);
-        }, 600);
-      }, 2400);
-    }
+            preloader.style.display = 'none';
+          }, 1200);
+        }, 1800);
+      }, 600);
+    }, 2400);
   }
 });
