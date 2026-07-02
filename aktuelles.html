@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daniel Meister - Aktuelles</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=44">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+      <div class="nav-container">
+        <a href="index.html" class="logo" style="display: flex; align-items: center;">
+          <img src="logo%20white.png" alt="Daniel Meister" class="logo-white" style="height: 56px; width: auto;">
+          <img src="logo%20red.png" alt="Daniel Meister" class="logo-red" style="height: 56px; width: auto; display: none;">
+        </a>
+        
+        <div class="nav-links">
+          <a href="about.html">Wer bin ich?</a>
+          <a href="politik.html">Meine Politik</a>
+          <a href="aktuelles.html">Aktuelles</a>
+          <a href="kontakt.html">Kontakt</a>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle Menu">
+          <span class="hamburger"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Fullscreen Menu Overlay -->
+    <div class="menu-overlay">
+      <div class="menu-content">
+        <a href="about.html" class="menu-link" data-image="images/wer%20bin%20ich.jpg">Wer bin ich?</a>
+        <a href="politik.html" class="menu-link" data-image="images/use%203.jpg">Meine Politik</a>
+        <a href="aktuelles.html" class="menu-link" data-image="images/use%202.jpg">Aktuelles</a>
+        <a href="kontakt.html" class="menu-link" data-image="images/use%201.jpg">Kontakt</a>
+      </div>
+      <img id="menu-hover-image" class="menu-hover-image" src="" alt="">
+    </div>
+
+    <!-- Hero Section for Pages -->
+    <header class="hero" style="min-height: 40vh; background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2070&auto=format&fit=crop'); background-position: center 30%;">
+      <div class="hero-content" style="padding-top: 8rem;">
+        <h1 class="hero-title" style="color: white; -webkit-text-fill-color: white; font-size: 4rem;">Aktuelles</h1>
+      </div>
+    </header>
+
+    <!-- Latest News Section -->
+    <section id="latest" class="section latest">
+      <div class="section-container">
+        <h2 class="section-title">Aktuelles in den Medien</h2>
+        
+        <!-- Filter Bar -->
+        <div class="news-filter">
+          <button class="filter-btn active" data-filter="all">Alle</button>
+          <button class="filter-btn" data-filter="news">News</button>
+          <button class="filter-btn" data-filter="insights">Insights</button>
+        </div>
+
+        <div class="news-grid">
+          
+          <a href="https://www.svp-nw.ch/medienmitteilungen/svp-ennetbuergen-mit-neuem-praesidenten-und-erneuertem-vorstand/" target="_blank" class="news-card" data-category="news">
+            <div class="news-image-wrapper">
+              <div class="news-image" style="background-image: url('https://www.svp-nw.ch/wp-content/uploads/sites/42/GV-SVP-Ennetbuergen-Bild-1-1041x720.jpg');"></div>
+            </div>
+            <div class="news-content">
+              <p class="news-date">11. Juni 2026</p>
+              <h3 class="news-title">SVP Ennetbürgen mit neuem Präsidenten und erneuertem Vorstand</h3>
+              <p class="news-source">SVP Nidwalden</p>
+            </div>
+          </a>
+
+          <a href="https://www.luzernerzeitung.ch/zentralschweiz/gemeinde/portrait-daniel-meister-nidwalden-wahlen-2026-landrat-ld.4117970" target="_blank" class="news-card" data-category="insights">
+            <div class="news-image-wrapper">
+              <div class="news-image" style="background-image: url('images/daniel_meister_portrait.webp');"></div>
+            </div>
+            <div class="news-content">
+              <p class="news-date">März 2026</p>
+              <h3 class="news-title">Daniel Meister (SVP) im Porträt | Wahlen Nidwalden 2026</h3>
+              <p class="news-source">Luzerner Zeitung</p>
+            </div>
+          </a>
+
+          <a href="https://www.svp-nw.ch/artikel/klartext-daniel-meister-in-den-gemeinderat-ennetbuergen/" target="_blank" class="news-card" data-category="news">
+            <div class="news-image-wrapper">
+              <div class="news-image" style="background-image: url('https://www.svp-nw.ch/wp-content/uploads/sites/42/KlartextDanielMeister-1.jpg');"></div>
+            </div>
+            <div class="news-content">
+              <p class="news-date">3. April 2024</p>
+              <h3 class="news-title">Klartext: Daniel Meister in den Gemeinderat Ennetbürgen</h3>
+              <p class="news-source">SVP Nidwalden</p>
+            </div>
+          </a>
+
+          <a href="https://www.nidwaldnerzeitung.ch/zentralschweiz/nidwalden/portrait-daniel-meister-gemeinderatswahlen-2024-ennetbuergen-ld.2605128" target="_blank" class="news-card" data-category="insights">
+            <div class="news-image-wrapper">
+              <div class="news-image" style="background-image: url('images/gemeinderat_portrait.jpg');"></div>
+            </div>
+            <div class="news-content">
+              <p class="news-date">März 2024</p>
+              <h3 class="news-title">Daniel Meister im Porträt | Gemeinderatswahl Ennetbürgen</h3>
+              <p class="news-source">Nidwaldner Zeitung</p>
+            </div>
+          </a>
+
+          <a href="https://www.nidwaldnerzeitung.ch/zentralschweiz/nidwalden/ennetbuergen-svp-nominiert-daniel-meister-fuer-die-gemeinderatswahlen-ld.2593344" target="_blank" class="news-card" data-category="news">
+            <div class="news-image-wrapper">
+              <div class="news-image" style="background-image: url('images/svp_nominiert_gemeinderat.webp');"></div>
+            </div>
+            <div class="news-content">
+              <p class="news-date">Februar 2024</p>
+              <h3 class="news-title">SVP nominiert Daniel Meister für Gemeinderatswahlen</h3>
+              <p class="news-source">Nidwaldner Zeitung</p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-cta">
+        <h2>Zukunft gemeinsam gestalten.</h2>
+      </div>
+      <div class="footer-container">
+        <!-- Column 1: Info -->
+        <div class="footer-col">
+          <img src="logo%20white.png" alt="Daniel Meister" class="footer-logo">
+          <p class="footer-mission">Freiheit, Verantwortung und starke Werte &ndash; für ein sicheres und erfolgreiches Nidwalden.</p>
+        </div>
+        
+        <!-- Column 2: Navigation -->
+        <div class="footer-col">
+          <h3>Navigation</h3>
+          <div class="footer-nav">
+            <a href="about.html">Wer bin ich?</a>
+            <a href="politik.html">Meine Politik</a>
+            <a href="aktuelles.html">Aktuelles</a>
+            <a href="kontakt.html">Kontakt</a>
+          </div>
+        </div>
+
+        <!-- Column 3: Contact -->
+        <div class="footer-col">
+          <h3>Kontakt</h3>
+          <p class="footer-address">
+            Daniel Meister<br>
+            Bürgenstockstrasse 50<br>
+            6373 Ennetbürgen
+          </p>
+          <a href="mailto:daniel.meister@parl-nw.ch" class="footer-email">daniel.meister@parl-nw.ch</a>
+          
+          <div class="footer-affiliation">
+            <img src="SVP_NW_Favicon.png" alt="SVP Nidwalden">
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Daniel Meister. Alle Rechte vorbehalten.</p>
+        <div class="footer-legal">
+          <a href="#">Impressum</a>
+          <a href="#">Datenschutz</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="main.js?v=9"></script>
+  </body>
+</html>

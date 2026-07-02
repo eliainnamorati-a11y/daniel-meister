@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daniel Meister - Home</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=44">
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+      <div class="preloader-content">
+        <img src="logo%20white.png" alt="Daniel Meister" class="preloader-logo">
+        <div class="preloader-line">
+          <div class="preloader-progress"></div>
+        </div>
+        <div class="preloader-text">
+          <span>KLAR.</span>
+          <span>EHRLICH.</span>
+          <span>KONSEQUENT.</span>
+        </div>
+      </div>
+      <div class="preloader-signature-container" id="preloader-signature">
+        <img src="daniel%20meister%20signature.svg" alt="Daniel Meister" class="preloader-signature-img">
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+      <div class="nav-container">
+        <a href="index.html" class="logo" style="display: flex; align-items: center;">
+          <img src="logo%20white.png" alt="Daniel Meister" class="logo-white" style="height: 56px; width: auto;">
+          <img src="logo%20red.png" alt="Daniel Meister" class="logo-red" style="height: 56px; width: auto; display: none;">
+        </a>
+        
+        <div class="nav-links">
+          <a href="about.html">Wer bin ich?</a>
+          <a href="politik.html">Meine Politik</a>
+          <a href="aktuelles.html">Aktuelles</a>
+          <a href="kontakt.html">Kontakt</a>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle Menu">
+          <span class="hamburger"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Fullscreen Menu Overlay -->
+    <div class="menu-overlay">
+      <div class="menu-content">
+        <a href="about.html" class="menu-link" data-image="images/wer%20bin%20ich.jpg">Wer bin ich?</a>
+        <a href="politik.html" class="menu-link" data-image="images/use%203.jpg">Meine Politik</a>
+        <a href="aktuelles.html" class="menu-link" data-image="images/use%202.jpg">Aktuelles</a>
+        <a href="kontakt.html" class="menu-link" data-image="images/use%201.jpg">Kontakt</a>
+      </div>
+      <img id="menu-hover-image" class="menu-hover-image" src="" alt="">
+    </div>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('images/DANIEL%20MEISTER%20(3).png');">
+      <div class="hero-content scroll-reveal">
+
+        <h1 class="hero-title" style="color: white; -webkit-text-fill-color: white;">Klar, ehrlich, konsequent.</h1>
+        <h2 class="hero-subtitle" style="color: #e2e8f0; margin-top: 1rem;">Ihre Stimme für Ennetbürgen – Im Nidwaldner Landrat<br><span style="font-size: 1.5rem; opacity: 0.9; display: block; margin-top: 0.5rem;">Für Freiheit, Sicherheit und ein starkes Nidwalden!</span></h2>
+      </div>
+    </header>
+
+    <!-- Short Intro Section -->
+    <section class="section about-preview">
+      <div class="section-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; align-items: center;">
+        <div class="about-image scroll-reveal" style="position: relative;">
+          <img src="images/other%20image%20for%20home.JPG" alt="Daniel Meister" style="width: 100%; border-radius: 0; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);">
+        </div>
+        <div class="scroll-reveal" style="transition-delay: 0.2s;">
+          <h2 style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1.5rem; line-height: 1.2;">Heimat, Verantwortung und Zukunft.</h2>
+          <p style="font-size: 1.2rem; line-height: 1.8; color: var(--text-main); margin-bottom: 2rem;">
+            Als Landrat setze ich mich für eine unabhängige Schweiz und einen starken Kanton Nidwalden ein. Ich engagiere mich für eine Politik, die auf Freiheit, Sicherheit und Eigenverantwortung basiert.
+          </p>
+          <div style="margin-bottom: 2.5rem;">
+            <img src="images/signature.png" alt="Daniel Meister Signature" class="signature scroll-reveal" style="height: 60px; width: auto; object-fit: contain;">
+          </div>
+          <a href="politik.html" class="btn btn-primary">Meine Politik entdecken</a>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <!-- Sustainable Future Section Mimic -->
+    <section class="arclin-section-1 scroll-reveal">
+      <video class="arclin-video-bg" autoplay loop muted playsinline>
+        <source src="images/clouds_cinematic.mp4" type="video/mp4">
+      </video>
+      <div class="arclin-video-overlay"></div>
+      <div class="arclin-container-1">
+        <h2 class="arclin-title-1">Nidwalden ist mehr als ein Wohnort – es ist unsere Heimat.</h2>
+        <p class="arclin-text-1">Dieses Privileg verpflichtet uns, unseren Kanton zu schützen und zu stärken, damit Freiheit, Sicherheit und Lebensqualität auch für kommende Generationen erhalten bleiben. Dafür setze ich mich ein – für Freiheit, Sicherheit und ein starkes Nidwalden!</p>
+      </div>
+    </section>
+
+    <!-- Test of Time Section Mimic -->
+    <div class="arclin-scroll-wrapper" id="arclin-scroll-wrapper">
+      <section class="arclin-section-2" id="arclin-slider-section">
+        <div class="arclin-container-2">
+          <div class="arclin-image-column">
+            <img src="images/use%201.jpg" alt="Materials" class="arclin-side-image active" data-slide="0">
+            <img src="images/use%202.jpg" alt="Technology" class="arclin-side-image" data-slide="1">
+            <img src="images/use%203.jpg" alt="Collaboration" class="arclin-side-image" data-slide="2">
+          </div>
+          <div class="arclin-text-column">
+            <div class="arclin-slides-top">
+              <h2 class="arclin-slide-title active" data-slide="0">
+                Nidwalden und die Schweiz sind mehr als nur unsere Heimat – sie sind ein Privileg.<br>
+                <span style="font-size: 1.2rem; font-family: var(--font-main); font-weight: 400; display: block; margin-top: 1.5rem; line-height: 1.5; color: var(--text-muted); text-transform: none;">Dieses Privileg verpflichtet uns, Verantwortung zu übernehmen und zu bewahren, was wir lieben: unsere Freiheit, Sicherheit, unsere Werte, unsere Geschichte, unsere Natur und den Zusammenhalt in unserer Gesellschaft.</span>
+              </h2>
+              <h2 class="arclin-slide-title" data-slide="1">
+                Ebenso prägend sind die Menschen, die hier leben.<br>
+                <span style="font-size: 1.2rem; font-family: var(--font-main); font-weight: 400; display: block; margin-top: 1.5rem; line-height: 1.5; color: var(--text-muted); text-transform: none;">Menschen, die einander mit Respekt begegnen, Verantwortung übernehmen und gemeinsam an einer aussichtsreichen Zukunft arbeiten.</span>
+              </h2>
+              <h2 class="arclin-slide-title" data-slide="2">
+                Stark und lebenswert für die Zukunft.<br>
+                <span style="font-size: 1.2rem; font-family: var(--font-main); font-weight: 400; display: block; margin-top: 1.5rem; line-height: 1.5; color: var(--text-muted); text-transform: none;">Denn nur durch gegenseitige Wertschätzung, Zusammenhalt und persönliches Engagement können wir unseren Kanton und unser Land auch für kommende Generationen stark, lebenswert und erfolgreich erhalten.</span>
+              </h2>
+            </div>
+            
+            <!-- Bottom Section -->
+            <div class="arclin-slides-bottom">
+              <div class="arclin-progress-container">
+                <div class="arclin-progress-bar" data-slide="0"><div class="arclin-progress-fill active"></div></div>
+                <div class="arclin-progress-bar" data-slide="1"><div class="arclin-progress-fill"></div></div>
+                <div class="arclin-progress-bar" data-slide="2"><div class="arclin-progress-fill"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- News Preview Section -->
+    <section class="section" style="background: var(--bg-color);">
+      <div class="section-container">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem;">
+          <h2 class="section-title scroll-reveal" style="margin-bottom: 0;">Aktuelles</h2>
+          <a href="aktuelles.html" class="btn btn-primary scroll-reveal">Alle Neuigkeiten</a>
+        </div>
+        <div class="news-grid scroll-reveal">
+          <a href="https://www.svp-nw.ch/medienmitteilungen/svp-ennetbuergen-mit-neuem-praesidenten-und-erneuertem-vorstand/" target="_blank" class="news-card">
+            <div class="news-image-wrapper">
+              <div class="news-image" style="background-image: url('https://www.svp-nw.ch/wp-content/uploads/sites/42/GV-SVP-Ennetbuergen-Bild-1-1041x720.jpg');"></div>
+            </div>
+            <div class="news-content">
+              <p class="news-date">11. Juni 2026</p>
+              <h3 class="news-title">SVP Ennetbürgen mit neuem Präsidenten und erneuertem Vorstand</h3>
+              <p class="news-source">SVP Nidwalden</p>
+            </div>
+          </a>
+<a href="https://www.luzernerzeitung.ch/zentralschweiz/gemeinde/portrait-daniel-meister-nidwalden-wahlen-2026-landrat-ld.4117970" target="_blank" class="news-card">
+            <div class="news-image-wrapper">
+              <div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1585829365295-ab7cd400c167?q=80&w=800&auto=format&fit=crop');"></div>
+            </div>
+            <div class="news-content">
+              <p class="news-date">März 2026</p>
+              <h3 class="news-title">Daniel Meister (SVP) im Porträt | Wahlen Nidwalden 2026</h3>
+              <p class="news-source">Luzerner Zeitung</p>
+            </div>
+          </a>
+<a href="https://www.svp-nw.ch/artikel/klartext-daniel-meister-in-den-gemeinderat-ennetbuergen/" target="_blank" class="news-card">
+            <div class="news-image-wrapper">
+              <div class="news-image" style="background-image: url('https://www.svp-nw.ch/wp-content/uploads/sites/42/KlartextDanielMeister-1.jpg');"></div>
+            </div>
+            <div class="news-content">
+              <p class="news-date">3. April 2024</p>
+              <h3 class="news-title">Klartext: Daniel Meister in den Gemeinderat Ennetbürgen</h3>
+              <p class="news-source">SVP Nidwalden</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-cta">
+        <h2>Zukunft gemeinsam gestalten.</h2>
+      </div>
+      <div class="footer-container">
+        <!-- Column 1: Info -->
+        <div class="footer-col">
+          <img src="logo%20white.png" alt="Daniel Meister" class="footer-logo">
+          <p class="footer-mission">Freiheit, Verantwortung und starke Werte &ndash; für ein sicheres und erfolgreiches Nidwalden.</p>
+        </div>
+        
+        <!-- Column 2: Navigation -->
+        <div class="footer-col">
+          <h3>Navigation</h3>
+          <div class="footer-nav">
+            <a href="about.html">Wer bin ich?</a>
+            <a href="politik.html">Meine Politik</a>
+            <a href="aktuelles.html">Aktuelles</a>
+            <a href="kontakt.html">Kontakt</a>
+          </div>
+        </div>
+
+        <!-- Column 3: Contact -->
+        <div class="footer-col">
+          <h3>Kontakt</h3>
+          <p class="footer-address">
+            Daniel Meister<br>
+            Bürgenstockstrasse 50<br>
+            6373 Ennetbürgen
+          </p>
+          <a href="mailto:daniel.meister@parl-nw.ch" class="footer-email">daniel.meister@parl-nw.ch</a>
+          
+          <div class="footer-affiliation">
+            <img src="SVP_NW_Favicon.png" alt="SVP Nidwalden">
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Daniel Meister. Alle Rechte vorbehalten.</p>
+        <div class="footer-legal">
+          <a href="#">Impressum</a>
+          <a href="#">Datenschutz</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="main.js?v=9"></script>
+  </body>
+</html>

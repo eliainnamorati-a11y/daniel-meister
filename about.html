@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daniel Meister - Wer bin ich?</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=44">
+  </head>
+  <body class="light-nav-page" style="background-color: #FFFFFF;">
+    <!-- Navigation -->
+    <nav class="main-nav">
+      <div class="nav-container">
+        <a href="index.html" class="logo" style="display: flex; align-items: center;">
+          <img src="logo%20white.png" alt="Daniel Meister" class="logo-white" style="height: 56px; width: auto;">
+          <img src="logo%20red.png" alt="Daniel Meister" class="logo-red" style="height: 56px; width: auto; display: none;">
+        </a>
+        
+        <div class="nav-links">
+          <a href="about.html">Wer bin ich?</a>
+          <a href="politik.html">Meine Politik</a>
+          <a href="aktuelles.html">Aktuelles</a>
+          <a href="kontakt.html">Kontakt</a>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle Menu">
+          <span class="hamburger"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Fullscreen Menu Overlay -->
+    <div class="menu-overlay">
+      <div class="menu-content">
+        <a href="about.html" class="menu-link" data-image="images/wer%20bin%20ich.jpg">Wer bin ich?</a>
+        <a href="politik.html" class="menu-link" data-image="images/use%203.jpg">Meine Politik</a>
+        <a href="aktuelles.html" class="menu-link" data-image="images/use%202.jpg">Aktuelles</a>
+        <a href="kontakt.html" class="menu-link" data-image="images/use%201.jpg">Kontakt</a>
+      </div>
+      <img id="menu-hover-image" class="menu-hover-image" src="" alt="">
+    </div>
+
+    <!-- Hero Section for Pages -->
+    <header class="hero" style="min-height: 20vh; background: #FFFFFF;">
+      <div class="hero-content" style="padding-top: 8rem; text-align: center;">
+        <h1 class="hero-title" style="color: var(--primary); font-size: 4rem; letter-spacing: -0.02em;">Wer bin ich?</h1>
+      </div>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about" class="about" style="padding-top: 1rem;">
+      <div class="section-container">
+        <div class="about-content" style="display: flex !important; flex-direction: column !important; align-items: center !important; text-align: center !important; max-width: 800px !important; margin: 0 auto !important; padding: 0 0 4rem 0 !important; gap: 3rem !important;">
+          <div class="about-image" style="width: 100%; max-width: 450px; margin: 0 auto;">
+            <img src="images/wer%20bin%20ich.jpg" alt="Daniel Meister" />
+            <div style="margin-top: 1.5rem; text-align: center; color: var(--text-muted); background: #FFFFFF; padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(0,0,0,0.06);">
+              <h3 style="color: var(--primary); font-size: 1.4rem; margin-bottom: 0.3rem;">Daniel Alexander Meister</h3>
+              <p style="font-size: 1.1rem; margin-bottom: 1rem; color: var(--text-muted);">Geboren am 7. Januar 1998</p>
+              <div style="border-top: 1px solid rgba(0,0,0,0.1); padding-top: 1rem;">
+                <p style="font-weight: 500; color: var(--primary); margin-bottom: 0.6rem; font-size: 1.05rem;">Landrat (NW) 2026-2030</p>
+                <p style="font-weight: 500; color: var(--primary); margin-bottom: 0.6rem; font-size: 1.05rem;">Präsident der SVP Ennetbürgen</p>
+                <p style="font-weight: 500; color: var(--primary); margin-bottom: 0.2rem; font-size: 1.05rem;">Kantonal Vorstand SVP Nidwalden (Finanzen)</p>
+                <div style="margin-top: 1.5rem;">
+                  <img src="SVP_NW_Favicon.png" alt="SVP Nidwalden" style="height: 60px; width: auto; object-fit: contain;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about-text" style="width: 100%;">
+            <p style="font-family: var(--font-display); font-style: italic; font-size: 2.5rem; color: var(--primary); line-height: 1.3;"><span class="scroll-reveal">„Heute lebe und arbeite ich in Nidwalden – einem Ort, der für mich Heimat, Verantwortung und Zukunft bedeutet.“</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LimeIQ Style Sticky Scrollytelling Timeline -->
+    <div class="story-wrapper" id="story-wrapper">
+      <div class="story-sticky" id="story-sticky">
+         <div class="story-ruler-container">
+            <div class="story-ruler base" >
+              <div class="story-ruler-ticks"></div>
+              <div class="story-ruler-tick-label" style="left: 5%;">1998</div>
+              <div class="story-ruler-tick-label" style="left: 15%;">2011</div>
+              <div class="story-ruler-tick-label" style="left: 25%;">2016</div>
+              <div class="story-ruler-tick-label" style="left: 35%;">2019</div>
+              <div class="story-ruler-tick-label" style="left: 45%;">2022</div>
+              <div class="story-ruler-tick-label" style="left: 55%;">2023</div>
+              <div class="story-ruler-tick-label" style="left: 68%;">2024</div>
+              <div class="story-ruler-tick-label" style="left: 82%;">2025</div>
+              <div class="story-ruler-tick-label" style="left: 95%;">2026</div>
+            </div>
+            <div class="story-ruler filled" id="story-ruler-filled" style="clip-path: polygon(0 0, 0% 0, 0% 100%, 0 100%);">
+              <div class="story-ruler-ticks"></div>
+              <div class="story-ruler-tick-label" style="left: 5%;">1998</div>
+              <div class="story-ruler-tick-label" style="left: 15%;">2011</div>
+              <div class="story-ruler-tick-label" style="left: 25%;">2016</div>
+              <div class="story-ruler-tick-label" style="left: 35%;">2019</div>
+              <div class="story-ruler-tick-label" style="left: 45%;">2022</div>
+              <div class="story-ruler-tick-label" style="left: 55%;">2023</div>
+              <div class="story-ruler-tick-label" style="left: 68%;">2024</div>
+              <div class="story-ruler-tick-label" style="left: 82%;">2025</div>
+              <div class="story-ruler-tick-label" style="left: 95%;">2026</div>
+            </div>
+         </div>
+         
+         <div class="story-cards-container">
+            <!-- 1 -->
+            <div class="story-card" style="transform: translateY(0);">
+              <div class="story-card-left">
+                <h2 class="story-title">Geburt & frühe Kindheit</h2>
+              </div>
+              <div class="story-card-right">
+                <h3 class="story-subtitle">1998</h3>
+                <p class="story-text">Geboren in England, wo mein Vater zu dieser Zeit beruflich tätig war.</p>
+              </div>
+            </div>
+            <!-- 2 -->
+            <div class="story-card">
+              <div class="story-card-left">
+                <h2 class="story-title">Kindheit in Deutschland</h2>
+              </div>
+              <div class="story-card-right">
+                <h3 class="story-subtitle">1999–2011</h3>
+                <p class="story-text">Ich wuchs in Stuttgart, Deutschland, in einem internationalen familiären Umfeld mit schweizerisch-bernischen und peruanischen Wurzeln auf. In der Schule übersprang ich die vierte Klasse. Gleichzeitig erhielt ich eine intensive sportliche Ausbildung im Fußball und Tennis.</p>
+              </div>
+            </div>
+            <!-- 3 -->
+            <div class="story-card">
+              <div class="story-card-left">
+                <h2 class="story-title">Jugend & Schulzeit in der Schweiz</h2>
+              </div>
+              <div class="story-card-right">
+                <h3 class="story-subtitle">2011–2016</h3>
+                <p class="story-text">Im Alter von 13 Jahren kehrte ich in die Schweiz zurück und absolvierte meine Sekundarschulzeit an der École Moser in Nyon (VD).</p>
+              </div>
+            </div>
+            <!-- 4 -->
+            <div class="story-card">
+              <div class="story-card-left">
+                <h2 class="story-title">Auslandsaufenthalt in Neuseeland</h2>
+              </div>
+              <div class="story-card-right">
+                <h3 class="story-subtitle">2015</h3>
+                <p class="story-text">Ich verbrachte fünf Monate in Neuseeland, wo ich viel Zeit in der Natur verbrachte und lernte, unabhängig in der Wildnis zu leben – unter anderem durch Jagen, Fischen und Survival-Training. Diese Erfahrung vertiefte meine Wertschätzung für die Natur und stärkte meinen Respekt gegenüber anderen Kulturen, insbesondere durch den Austausch mit Māori und Einheimischen.</p>
+              </div>
+            </div>
+            <!-- 5 -->
+            <div class="story-card">
+              <div class="story-card-left">
+                <h2 class="story-title">Studium in den USA & Italien</h2>
+              </div>
+              <div class="story-card-right">
+                <h3 class="story-subtitle">2016–2019</h3>
+                <p class="story-text">Bachelorstudium am Babson College in Wellesley, Massachusetts (USA). Während drei Jahren Mitglied des Varsity-Tennisteams in der NCAA Division III. Zudem absolvierte ich ein Austauschsemester an der Bocconi University in Mailand.</p>
+              </div>
+            </div>
+            <!-- 6 -->
+            <div class="story-card">
+              <div class="story-card-left">
+                <h2 class="story-title">Persönlicher Meilenstein</h2>
+              </div>
+              <div class="story-card-right">
+                <h3 class="story-subtitle">2018</h3>
+                <p class="story-text">Während meines Studiums in den USA lernte ich meine Verlobte Elia kennen.</p>
+              </div>
+            </div>
+            <!-- 7 -->
+            <div class="story-card">
+              <div class="story-card-left">
+                <h2 class="story-title">Einstieg bei Silverpine AG</h2>
+              </div>
+              <div class="story-card-right">
+                <h3 class="story-subtitle">Seit 2019</h3>
+                <p class="story-text">Eintritt in die <a href="https://silverpine.ch?utm_source=chatgpt.com" target="_blank">Silverpine AG</a>, unser Familienunternehmen im Finanz- und Immobiliensektor.</p>
+              </div>
+            </div>
+            <!-- 8 -->
+            <div class="story-card">
+              <div class="story-card-left">
+                <h2 class="story-title">Praktikum im Asset Management</h2>
+              </div>
+              <div class="story-card-right">
+                <h3 class="story-subtitle">2022</h3>
+                <p class="story-text">Praktikum bei <a href="https://www.comgest.com?utm_source=chatgpt.com" target="_blank">Comgest Asset Management</a> in Paris im Bereich Aktienanalyse und Portfoliomanagement.</p>
+              </div>
+            </div>
+            <!-- 9 -->
+            <div class="story-card">
+              <div class="story-card-left">
+                <h2 class="story-title">Masterabschluss & operative Verantwortung</h2>
+              </div>
+              <div class="story-card-right">
+                <h3 class="story-subtitle">2023</h3>
+                <p class="story-text">Masterabschluss in Asset Management an der University of Geneva. Gleichzeitig vollständiger Einstieg in die operative Tätigkeit bei Silverpine AG.</p>
+              </div>
+            </div>
+            <!-- 10 -->
+            <div class="story-card">
+              <div class="story-card-left">
+                <h2 class="story-title">Führungsverantwortung</h2>
+              </div>
+              <div class="story-card-right">
+                <h3 class="story-subtitle">Seit 2023</h3>
+                <p class="story-text">Verantwortlich für die Immobilienentwicklung der Silverpine AG in der Schweiz sowie für das Finanzportfolio und den Investmentfonds Fortis Capital Sàrl in Luxemburg.</p>
+              </div>
+            </div>
+            <!-- 11 -->
+            <div class="story-card">
+              <div class="story-card-left">
+                <h2 class="story-title">Eintritt in die Politik</h2>
+              </div>
+              <div class="story-card-right">
+                <h3 class="story-subtitle">April 2024</h3>
+                <p class="story-text">Kandidatur bei den Gemeinderatswahlen in Ennetbürgen. Als Neukandidat erzielte ich mit 567 Stimmen ein starkes Resultat und verpasste den Einzug in den Gemeinderat nur knapp.</p>
+              </div>
+            </div>
+            <!-- 12 -->
+            <div class="story-card">
+              <div class="story-card-left">
+                <h2 class="story-title">Wahl zum Vizepräsidenten der SVP Ennetbürgen</h2>
+              </div>
+              <div class="story-card-right">
+                <h3 class="story-subtitle">2024</h3>
+                <p class="story-text">Wahl zum Vizepräsidenten der SVP Ennetbürgen durch die Generalversammlung der Ortspartei.</p>
+              </div>
+            </div>
+            <!-- 13 -->
+            <div class="story-card">
+              <div class="story-card-left">
+                <h2 class="story-title">Gesellschaftliches Engagement</h2>
+              </div>
+              <div class="story-card-right">
+                <h3 class="story-subtitle">Ende 2024</h3>
+                <p class="story-text">Mitgründer der Interessengemeinschaft Zukunft Dorf Ennetbürgen. Tätigkeit als Vorstandsmitglied und Kassier. Ziel der überparteilichen Interessengemeinschaft ist es, als Bindeglied zwischen Bevölkerung und Gemeinderat zu wirken.</p>
+              </div>
+            </div>
+            <!-- 14 -->
+            <div class="story-card">
+              <div class="story-card-left">
+                <h2 class="story-title">Wahl in den Kantonalvorstand</h2>
+              </div>
+              <div class="story-card-right">
+                <h3 class="story-subtitle">Juni 2025</h3>
+                <p class="story-text">Wahl in den Vorstand der SVP Nidwalden im Bereich Finanzen.</p>
+              </div>
+            </div>
+            <!-- 15 -->
+            <div class="story-card">
+              <div class="story-card-left">
+                <h2 class="story-title">Nomination für den Bezirksrat</h2>
+              </div>
+              <div class="story-card-right">
+                <h3 class="story-subtitle">November 2025</h3>
+                <p class="story-text">Nomination als Kandidat der SVP Ennetbürgen für den Bezirksrat.</p>
+              </div>
+            </div>
+            <!-- 16 -->
+            <div class="story-card">
+              <div class="story-card-left">
+                <h2 class="story-title">Wahl in den Kantonsrat</h2>
+              </div>
+              <div class="story-card-right">
+                <h3 class="story-subtitle">8. März 2026</h3>
+                <p class="story-text">Mit 603 Stimmen in den Kantonsrat Nidwalden gewählt.</p>
+              </div>
+            </div>
+            <!-- 17 -->
+            <div class="story-card">
+              <div class="story-card-left">
+                <h2 class="story-title">Berufung in die Finanzkommission</h2>
+              </div>
+              <div class="story-card-right">
+                <h3 class="story-subtitle">24. Juni 2026</h3>
+                <p class="story-text">Bestätigung durch den Regierungsrat als Mitglied der Finanzkommission des Kantons Nidwalden.</p>
+              </div>
+            </div>
+         </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-cta">
+        <h2>Zukunft gemeinsam gestalten.</h2>
+      </div>
+      <div class="footer-container">
+        <!-- Column 1: Info -->
+        <div class="footer-col">
+          <img src="logo%20white.png" alt="Daniel Meister" class="footer-logo">
+          <p class="footer-mission">Freiheit, Verantwortung und starke Werte &ndash; für ein sicheres und erfolgreiches Nidwalden.</p>
+        </div>
+        
+        <!-- Column 2: Navigation -->
+        <div class="footer-col">
+          <h3>Navigation</h3>
+          <div class="footer-nav">
+            <a href="about.html">Wer bin ich?</a>
+            <a href="politik.html">Meine Politik</a>
+            <a href="aktuelles.html">Aktuelles</a>
+            <a href="kontakt.html">Kontakt</a>
+          </div>
+        </div>
+
+        <!-- Column 3: Contact -->
+        <div class="footer-col">
+          <h3>Kontakt</h3>
+          <p class="footer-address">
+            Daniel Meister<br>
+            Bürgenstockstrasse 50<br>
+            6373 Ennetbürgen
+          </p>
+          <a href="mailto:daniel.meister@parl-nw.ch" class="footer-email">daniel.meister@parl-nw.ch</a>
+          
+          <div class="footer-affiliation">
+            <img src="SVP_NW_Favicon.png" alt="SVP Nidwalden">
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Daniel Meister. Alle Rechte vorbehalten.</p>
+        <div class="footer-legal">
+          <a href="#">Impressum</a>
+          <a href="#">Datenschutz</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="main.js?v=9"></script>
+  </body>
+</html>

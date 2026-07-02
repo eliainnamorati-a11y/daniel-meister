@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daniel Meister - Kontakt</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=44">
+  </head>
+  <body class="light-nav-page" style="background-color: #FFFFFF;">
+    <!-- Navigation -->
+    <nav class="main-nav">
+      <div class="nav-container">
+        <a href="index.html" class="logo" style="display: flex; align-items: center;">
+          <img src="logo%20white.png" alt="Daniel Meister" class="logo-white" style="height: 56px; width: auto;">
+          <img src="logo%20red.png" alt="Daniel Meister" class="logo-red" style="height: 56px; width: auto; display: none;">
+        </a>
+        
+        <div class="nav-links">
+          <a href="about.html">Wer bin ich?</a>
+          <a href="politik.html">Meine Politik</a>
+          <a href="aktuelles.html">Aktuelles</a>
+          <a href="kontakt.html">Kontakt</a>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle Menu">
+          <span class="hamburger"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Fullscreen Menu Overlay -->
+    <div class="menu-overlay">
+      <div class="menu-content">
+        <a href="about.html" class="menu-link" data-image="images/wer%20bin%20ich.jpg">Wer bin ich?</a>
+        <a href="politik.html" class="menu-link" data-image="images/use%203.jpg">Meine Politik</a>
+        <a href="aktuelles.html" class="menu-link" data-image="images/use%202.jpg">Aktuelles</a>
+        <a href="kontakt.html" class="menu-link" data-image="images/use%201.jpg">Kontakt</a>
+      </div>
+      <img id="menu-hover-image" class="menu-hover-image" src="" alt="">
+    </div>
+
+    <!-- Hero Section for Pages -->
+    <header class="hero" style="min-height: 20vh; background: #FFFFFF;">
+      <div class="hero-content" style="padding-top: 8rem; text-align: center;">
+        <h1 class="hero-title" style="color: var(--primary); font-size: 4rem; letter-spacing: -0.02em;">Kontakt</h1>
+      </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="section" style="padding-top: 2rem;">
+      <div class="section-container" style="max-width: 1200px;">
+        <div class="contact-wrapper" style="display: grid; grid-template-columns: 1fr; gap: 6rem; align-items: start;">
+          
+          <!-- Left Column: Big Text & Info -->
+          <div class="contact-info scroll-reveal" style="padding: 0 2rem;">
+            <p style="font-family: var(--font-display); font-style: italic; font-size: 2.8rem; color: var(--primary); line-height: 1.2; margin-bottom: 3rem;">
+              «Haben Sie Fragen, Anliegen oder möchten Sie mehr über meine politische Arbeit erfahren? Ich freue mich auf Ihre Nachricht.»
+            </p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-top: 5rem;">
+              <div class="contact-item">
+                <h4 style="font-family: var(--font-main); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; color: var(--text-muted); margin-bottom: 1rem;">Adresse</h4>
+                <p style="font-size: 1.2rem; font-weight: 500; line-height: 1.5; color: var(--primary);">Bürgenstockstrasse 50<br>6373 Ennetbürgen</p>
+              </div>
+
+              <div class="contact-item">
+                <h4 style="font-family: var(--font-main); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; color: var(--text-muted); margin-bottom: 1rem;">E-Mail</h4>
+                <a href="mailto:daniel.meister@parl-nw.ch" style="font-size: 1.2rem; font-weight: 500; color: var(--primary); border-bottom: 1px solid var(--accent);">daniel.meister@parl-nw.ch</a>
+              </div>
+
+              <div class="contact-item">
+                <h4 style="font-family: var(--font-main); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; color: var(--text-muted); margin-bottom: 1rem;">Folgen</h4>
+                <a href="https://www.instagram.com/danielmeister_svp/" target="_blank" style="font-size: 1.2rem; font-weight: 500; color: var(--primary); border-bottom: 1px solid var(--accent);">Instagram</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Minimal Form -->
+          <div class="contact-form-container scroll-reveal" style="background: #F8FAFC; padding: 4rem; border-radius: 24px; margin: 0 2rem;">
+            <form action="mailto:daniel.meister@parl-nw.ch" method="post" enctype="text/plain" class="contact-form">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+                <div class="form-group">
+                  <label for="name" style="display: block; margin-bottom: 0.8rem; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted);">Name</label>
+                  <input type="text" id="name" name="name" required placeholder="Ihr Name" style="width: 100%; padding: 1.2rem; background: white; border: 1px solid rgba(0,0,0,0.06); border-radius: 12px; font-family: inherit; font-size: 1rem; transition: all 0.3s ease;">
+                </div>
+                <div class="form-group">
+                  <label for="email" style="display: block; margin-bottom: 0.8rem; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted);">E-Mail</label>
+                  <input type="email" id="email" name="email" required placeholder="ihre@email.ch" style="width: 100%; padding: 1.2rem; background: white; border: 1px solid rgba(0,0,0,0.06); border-radius: 12px; font-family: inherit; font-size: 1rem; transition: all 0.3s ease;">
+                </div>
+              </div>
+              <div class="form-group" style="margin-bottom: 2rem;">
+                <label for="subject" style="display: block; margin-bottom: 0.8rem; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted);">Betreff</label>
+                <input type="text" id="subject" name="subject" required placeholder="Worum geht es?" style="width: 100%; padding: 1.2rem; background: white; border: 1px solid rgba(0,0,0,0.06); border-radius: 12px; font-family: inherit; font-size: 1rem; transition: all 0.3s ease;">
+              </div>
+              <div class="form-group" style="margin-bottom: 3rem;">
+                <label for="message" style="display: block; margin-bottom: 0.8rem; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted);">Nachricht</label>
+                <textarea id="message" name="message" rows="6" required placeholder="Ihre Nachricht..." style="width: 100%; padding: 1.2rem; background: white; border: 1px solid rgba(0,0,0,0.06); border-radius: 12px; font-family: inherit; font-size: 1rem; resize: vertical; transition: all 0.3s ease;"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width: 100%; height: 60px; border-radius: 12px; font-size: 1rem; letter-spacing: 3px;">
+                Nachricht senden
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-cta">
+        <h2>Zukunft gemeinsam gestalten.</h2>
+      </div>
+      <div class="footer-container">
+        <!-- Column 1: Info -->
+        <div class="footer-col">
+          <img src="logo%20white.png" alt="Daniel Meister" class="footer-logo">
+          <p class="footer-mission">Freiheit, Verantwortung und starke Werte &ndash; für ein sicheres und erfolgreiches Nidwalden.</p>
+        </div>
+        
+        <!-- Column 2: Navigation -->
+        <div class="footer-col">
+          <h3>Navigation</h3>
+          <div class="footer-nav">
+            <a href="about.html">Wer bin ich?</a>
+            <a href="politik.html">Meine Politik</a>
+            <a href="aktuelles.html">Aktuelles</a>
+            <a href="kontakt.html">Kontakt</a>
+          </div>
+        </div>
+
+        <!-- Column 3: Contact -->
+        <div class="footer-col">
+          <h3>Kontakt</h3>
+          <p class="footer-address">
+            Daniel Meister<br>
+            Bürgenstockstrasse 50<br>
+            6373 Ennetbürgen
+          </p>
+          <a href="mailto:daniel.meister@parl-nw.ch" class="footer-email">daniel.meister@parl-nw.ch</a>
+          
+          <div class="footer-affiliation">
+            <img src="SVP_NW_Favicon.png" alt="SVP Nidwalden">
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Daniel Meister. Alle Rechte vorbehalten.</p>
+        <div class="footer-legal">
+          <a href="#">Impressum</a>
+          <a href="#">Datenschutz</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="main.js?v=9"></script>
+  </body>
+</html>
