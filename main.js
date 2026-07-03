@@ -309,20 +309,18 @@ document.addEventListener("DOMContentLoaded", () => {
         const paths = card.querySelectorAll('.card-icon path, .card-icon line, .card-icon polyline, .card-icon circle, .card-icon ellipse, .card-icon rect');
         paths.forEach(path => {
           const length = 400; // Match CSS dasharray
-          const drawProgress = Math.max(0, Math.min(1, cardProgress * 1.5)); // Accelerate drawing slightly
+          let drawProgress = (cardProgress > 0) ? Math.max(0, Math.min(1, cardProgress * 1.5)) : 0;
+          if (index === 0) {
+            // First card is fully drawn initially and then can fade/redraw
+            drawProgress = (progress < 1 / (numCards - 1)) ? 1 : 0;
+          }
           path.style.strokeDashoffset = length * (1 - drawProgress);
         });
       });
       
-      // Handle the base card (index 0) active state and icon drawing
-      const firstCardPaths = cards[0].querySelectorAll('.card-icon path, .card-icon line, .card-icon polyline, .card-icon circle, .card-icon ellipse, .card-icon rect');
+      // Handle the base card (index 0) active state
       if (progress < 1 / (numCards - 1)) {
         cards[0].classList.add('active');
-        firstCardPaths.forEach(path => {
-          // For the first card, it's drawn when progress is 0
-          // As we scroll towards the second card, it can stay drawn or fade
-          path.style.strokeDashoffset = '0';
-        });
       } else {
         cards[0].classList.remove('active');
       }

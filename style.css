@@ -1586,6 +1586,47 @@ body.no-scroll .main-nav .logo-red {
   max-width: 550px;
 }
 
+/* Politics Card Specific Animations */
+.card-icon path,
+.card-icon line,
+.card-icon polyline,
+.card-icon circle,
+.card-icon ellipse,
+.card-icon rect {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  transition: stroke-dashoffset 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.story-card.active .card-icon path,
+.story-card.active .card-icon line,
+.story-card.active .card-icon polyline,
+.story-card.active .card-icon circle,
+.story-card.active .card-icon ellipse,
+.story-card.active .card-icon rect {
+  stroke-dashoffset: 0;
+}
+
+/* Content Entry Animations */
+.story-card .story-title,
+.story-card .story-subtitle,
+.story-card .story-text {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition-delay: 0.1s;
+}
+
+.story-card .story-subtitle { transition-delay: 0.2s; }
+.story-card .story-text { transition-delay: 0.3s; }
+
+.story-card.active .story-title,
+.story-card.active .story-subtitle,
+.story-card.active .story-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media (max-width: 768px) {
   .story-wrapper {
     height: auto !important; /* Natural height on mobile */
