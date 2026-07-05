@@ -1803,16 +1803,16 @@ body.reveal-content .story-card.active .card-icon rect {
   opacity: 0;
   transform: translateY(15px);
 }
-.preloader-text span:nth-child(1) { animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.2s forwards; }
-.preloader-text span:nth-child(2) { animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.4s forwards; }
-.preloader-text span:nth-child(3) { animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.6s forwards; }
+.preloader-text span:nth-child(1) { animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.9s forwards; }
+.preloader-text span:nth-child(2) { animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 1.05s forwards; }
+.preloader-text span:nth-child(3) { animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 1.2s forwards; }
 .preloader.slide-in {
   transform: translateY(100%);
   transition: none;
 }
 .preloader.slide-in.active {
   transform: translateY(0);
-  transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 /* Simple Page Transition Curtain */
@@ -1829,7 +1829,7 @@ body.reveal-content .story-card.active .card-icon rect {
 }
 .transition-curtain.active {
   transform: translateY(0);
-  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: transform 0.45s cubic-bezier(0.77, 0, 0.175, 1);
 }
 .preloader-content {
   display: flex;
@@ -1841,7 +1841,7 @@ body.reveal-content .story-card.active .card-icon rect {
   height: 50px;
   width: auto;
   opacity: 0;
-  animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+  animation: fadeUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
 }
 .preloader-line {
   width: 200px;
@@ -1849,7 +1849,7 @@ body.reveal-content .story-card.active .card-icon rect {
   background-color: rgba(255, 255, 255, 0.15);
   position: relative;
   opacity: 0;
-  animation: fadeIn 0.5s ease 0.6s forwards;
+  animation: fadeIn 0.4s ease 0.45s forwards;
 }
 .preloader-progress {
   position: absolute;
@@ -1860,7 +1860,7 @@ body.reveal-content .story-card.active .card-icon rect {
   background-color: #fff;
   transform-origin: left;
   transform: scaleX(0);
-  animation: loadLine 1.8s cubic-bezier(0.77, 0, 0.175, 1) 0.6s forwards;
+  animation: loadLine 1.35s cubic-bezier(0.77, 0, 0.175, 1) 0.45s forwards;
 }
 .preloader-text {
   display: flex;
@@ -1909,7 +1909,7 @@ body.reveal-content .story-card.active .card-icon rect {
 }
 
 .preloader-signature-container.draw {
-  animation: drawSignature 0.8s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.1s forwards;
+  animation: drawSignature 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.075s forwards;
 }
 
 @keyframes drawSignature {

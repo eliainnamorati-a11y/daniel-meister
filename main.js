@@ -44,7 +44,7 @@ function handlePageTransition(url) {
   
   setTimeout(() => {
     window.location.href = url;
-  }, 600); // Matches the new CSS transition duration
+  }, 450); // Speed up transition by 25%
 }
 
 // Intercept Nav Links for Transition
@@ -360,18 +360,18 @@ window.addEventListener('load', () => {
           document.body.classList.add('reveal-content');
           setTimeout(() => {
             preloader.style.display = 'none';
-          }, 800);
-        }, 800); // Give the signature 0.8s to draw
+          }, 600);
+        }, 600); // Give the signature 0.6s to draw (faster)
       }, 100);
     } else {
       // Full cinematic preloader for home page
       setTimeout(() => {
         if (preloaderContent) {
-          preloaderContent.style.transition = 'opacity 0.4s ease';
+          preloaderContent.style.transition = 'opacity 0.3s ease';
           preloaderContent.style.opacity = '0';
           setTimeout(() => {
             preloaderContent.style.display = 'none';
-          }, 400);
+          }, 300);
         }
         
         setTimeout(() => {
@@ -385,10 +385,10 @@ window.addEventListener('load', () => {
             document.body.classList.add('reveal-content');
             setTimeout(() => {
               preloader.style.display = 'none';
-            }, 800);
-          }, 1200);
-        }, 600);
-      }, 2400);
+            }, 600);
+          }, 900);
+        }, 450);
+      }, 1800);
     }
   }
 });
