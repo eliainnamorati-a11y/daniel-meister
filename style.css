@@ -912,16 +912,17 @@ body.reveal-content .hero-content {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.55); /* Lightened slightly from 0.7 to 0.55 */
+  background: rgba(0, 0, 0, 0.55);
   z-index: 1;
+  pointer-events: none; /* Ensure it doesn't block interactions */
 }
 
 .arclin-container-1 {
-  max-width: 1000px; /* Wider container for better centering look */
+  max-width: 1000px;
   width: 100%;
-  text-align: center; /* Centered by default */
+  text-align: center;
   position: relative;
-  z-index: 2;
+  z-index: 10; /* Boosted to ensure it is above everything else */
 }
 
 @media (min-width: 1024px) {
