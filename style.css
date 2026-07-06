@@ -912,7 +912,7 @@ body.reveal-content .hero-content {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* Darkened more for better text pop */
+  background: rgba(0, 0, 0, 0.55); /* Lightened slightly from 0.7 to 0.55 */
   z-index: 1;
 }
 
@@ -934,23 +934,23 @@ body.reveal-content .hero-content {
 .arclin-title-1 {
   font-family: var(--font-display);
   font-size: clamp(2.2rem, 6vw, 4.5rem);
-  font-weight: 500; /* Added weight for legibility */
+  font-weight: 600; /* More weight */
   line-height: 1.1;
   letter-spacing: -0.02em;
   margin-bottom: 2rem;
-  color: #ffffff;
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8); /* Much stronger shadow */
+  color: #ffffff !important; /* Force white */
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Lighter, tighter shadow */
 }
 
 .arclin-text-1 {
   font-size: 1.25rem;
   line-height: 1.7;
-  color: #ffffff;
+  color: #ffffff !important; /* Force white */
   margin-bottom: 3rem;
-  max-width: 700px; /* Slightly wider for better centering balance */
+  max-width: 700px;
   margin-left: auto;
   margin-right: auto;
-  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.8); /* Much stronger shadow */
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3); /* Lighter shadow */
 }
 
 @media (min-width: 1024px) {
