@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=44">
+    <link rel="icon" type="image/png" href="icon.png">
   </head>
   <body>
     <!-- Preloader -->
@@ -64,8 +65,8 @@
     <header id="home" class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('images/DANIEL%20MEISTER%20(3).png'); position: relative;">
       <div class="hero-content scroll-reveal" style="position: absolute; bottom: 6rem; left: 4rem; margin: 0; text-align: left; max-width: 900px; padding: 0;">
         <h1 class="hero-title" style="color: white; -webkit-text-fill-color: white; font-size: 5rem; margin-bottom: 0.5rem;">Klar, ehrlich, konsequent.</h1>
-        <p style="color: white; font-size: 1.8rem; font-weight: 500; margin-bottom: 0.5rem; font-family: var(--font-main); letter-spacing: 0.5px;">Ihre Stimme für Ennetbürgen – Im Nidwaldner Landrat</p>
-        <p style="color: rgba(255,255,255,0.9); font-size: 1.4rem; font-weight: 400; font-family: var(--font-main);">Für Freiheit, Sicherheit und ein starkes Nidwalden!</p>
+        <p class="hero-subtitle" style="color: white; font-size: 1.8rem; font-weight: 500; margin-bottom: 0.5rem; font-family: var(--font-main); letter-spacing: 0.5px;">Ihre Stimme für Ennetbürgen – Im Nidwaldner Landrat</p>
+        <p class="hero-tagline" style="color: rgba(255,255,255,0.9); font-size: 1.4rem; font-weight: 400; font-family: var(--font-main);">Für Freiheit, Sicherheit und ein starkes Nidwalden!</p>
       </div>
     </header>
 
@@ -143,12 +144,12 @@
     <!-- News Preview Section -->
     <section class="section" style="background: var(--bg-color);">
       <div class="section-container">
-        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; position: sticky; top: 90px; background: var(--bg-color); z-index: 10; padding-top: 2rem; padding-bottom: 2rem; margin-top: -2rem;">
           <h2 class="section-title scroll-reveal" style="margin-bottom: 0;">Aktuelles</h2>
           <a href="aktuelles.html" class="btn btn-primary scroll-reveal">Alle Neuigkeiten</a>
         </div>
-        <div class="news-grid scroll-reveal">
-          <a href="https://www.svp-nw.ch/medienmitteilungen/svp-ennetbuergen-mit-neuem-praesidenten-und-erneuertem-vorstand/" target="_blank" class="news-card">
+        <div class="news-grid">
+          <a href="https://www.svp-nw.ch/medienmitteilungen/svp-ennetbuergen-mit-neuem-praesidenten-und-erneuertem-vorstand/" target="_blank" class="news-card scroll-reveal" style="transition-delay: 0.1s;">
             <div class="news-image-wrapper">
               <div class="news-image" style="background-image: url('https://www.svp-nw.ch/wp-content/uploads/sites/42/GV-SVP-Ennetbuergen-Bild-1-1041x720.jpg');"></div>
             </div>
@@ -158,7 +159,7 @@
               <p class="news-source">SVP Nidwalden</p>
             </div>
           </a>
-<a href="https://www.luzernerzeitung.ch/zentralschweiz/gemeinde/portrait-daniel-meister-nidwalden-wahlen-2026-landrat-ld.4117970" target="_blank" class="news-card">
+          <a href="https://www.luzernerzeitung.ch/zentralschweiz/gemeinde/portrait-daniel-meister-nidwalden-wahlen-2026-landrat-ld.4117970" target="_blank" class="news-card scroll-reveal" style="transition-delay: 0.2s;">
             <div class="news-image-wrapper">
               <div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1585829365295-ab7cd400c167?q=80&w=800&auto=format&fit=crop');"></div>
             </div>
@@ -168,7 +169,7 @@
               <p class="news-source">Luzerner Zeitung</p>
             </div>
           </a>
-<a href="https://www.svp-nw.ch/artikel/klartext-daniel-meister-in-den-gemeinderat-ennetbuergen/" target="_blank" class="news-card">
+          <a href="https://www.svp-nw.ch/artikel/klartext-daniel-meister-in-den-gemeinderat-ennetbuergen/" target="_blank" class="news-card scroll-reveal" style="transition-delay: 0.3s;">
             <div class="news-image-wrapper">
               <div class="news-image" style="background-image: url('https://www.svp-nw.ch/wp-content/uploads/sites/42/KlartextDanielMeister-1.jpg');"></div>
             </div>
@@ -191,7 +192,9 @@
         <!-- Column 1: Info -->
         <div class="footer-col">
           <img src="logo%20white.png" alt="Daniel Meister" class="footer-logo">
-          <p class="footer-mission">Freiheit, Verantwortung und starke Werte &ndash; für ein sicheres und erfolgreiches Nidwalden.</p>
+          <div class="footer-affiliation">
+            <img src="SVP_NW_Favicon.png" alt="SVP Nidwalden">
+          </div>
         </div>
         
         <!-- Column 2: Navigation -->
@@ -213,9 +216,7 @@
           </p>
           <a href="mailto:daniel.meister@parl-nw.ch" class="footer-email">daniel.meister@parl-nw.ch</a>
           
-          <div class="footer-affiliation">
-            <img src="SVP_NW_Favicon.png" alt="SVP Nidwalden">
-          </div>
+
         </div>
       </div>
       

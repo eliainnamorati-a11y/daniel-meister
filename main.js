@@ -388,7 +388,27 @@ window.addEventListener('load', () => {
             }, 600);
           }, 900);
         }, 450);
-      }, 1800);
+      }, 3200);
     }
+  }
+});
+
+// Continuous scroll darken effect for contact text
+document.addEventListener('scroll', () => {
+  const contactText = document.getElementById('kontakt-scroll-text');
+  if (contactText) {
+    const rect = contactText.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+    
+    // Start darkening when the element is 80% down the screen
+    // Fully dark when it reaches 40% down the screen
+    const startFade = windowHeight * 0.8;
+    const endFade = windowHeight * 0.4;
+    
+    let progress = (startFade - rect.top) / (startFade - endFade);
+    progress = Math.max(0, Math.min(1, progress));
+    
+    // Opacity goes from 0.2 to 1.0
+    contactText.style.opacity = 0.2 + (0.8 * progress);
   }
 });

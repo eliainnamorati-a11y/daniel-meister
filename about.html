@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=44">
+    <link rel="icon" type="image/png" href="icon.png">
   </head>
   <body>
     <!-- Preloader -->
@@ -74,29 +75,26 @@
             <div style="position: relative; border-radius: 0; overflow: hidden; aspect-ratio: 4/5;">
               <img src="images/wer%20bin%20ich.jpg" alt="Daniel Meister" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
-            <div style="margin-top: 1.5rem; text-align: center; background: #F8FAFC; padding: 1.5rem; border-radius: 16px; border: 1px solid rgba(0,0,0,0.05);">
+            <div style="margin-top: 1.5rem; text-align: center; background: #F8FAFC; padding: 1.5rem; border-radius: 0; border: 1px solid rgba(0,0,0,0.05);">
               <h3 style="color: var(--primary); font-size: 1.3rem; margin-bottom: 0.2rem;">Daniel Alexander Meister</h3>
               <p style="font-size: 1rem; color: var(--text-muted);">Geboren am 7. Januar 1998</p>
             </div>
           </div>
 
           <!-- Right: Information -->
-          <div class="about-text scroll-reveal" style="text-align: left;">
-            <p style="font-family: var(--font-display); font-style: italic; font-size: 2.8rem; color: var(--primary); line-height: 1.2; margin-bottom: 3rem;">
+          <div class="about-text" style="text-align: left;">
+            <p class="scroll-reveal intro-quote" style="font-family: var(--font-display); font-style: italic; font-size: 2.8rem; color: var(--primary); line-height: 1.2; margin-bottom: 3rem;">
               «Heute lebe und arbeite ich in Nidwalden – einem Ort, der für mich Heimat, Verantwortung und Zukunft bedeutet.»
             </p>
             
             <div style="display: flex; flex-direction: column; gap: 1.2rem; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 2rem;">
-              <p style="font-weight: 500; color: var(--primary); font-size: 1.1rem; display: flex; align-items: center; gap: 1rem;">
-                <span style="width: 8px; height: 8px; background: var(--accent); border-radius: 50%;"></span>
+              <p class="scroll-reveal" style="font-weight: 500; color: var(--primary); font-size: 1.1rem; display: flex; align-items: center; gap: 1rem; transition-delay: 0.1s;">
                 Landrat (NW) 2026-2030
               </p>
-              <p style="font-weight: 500; color: var(--primary); font-size: 1.1rem; display: flex; align-items: center; gap: 1rem;">
-                <span style="width: 8px; height: 8px; background: var(--accent); border-radius: 50%;"></span>
+              <p class="scroll-reveal" style="font-weight: 500; color: var(--primary); font-size: 1.1rem; display: flex; align-items: center; gap: 1rem; transition-delay: 0.2s;">
                 Präsident der SVP Ennetbürgen
               </p>
-              <p style="font-weight: 500; color: var(--primary); font-size: 1.1rem; display: flex; align-items: center; gap: 1rem;">
-                <span style="width: 8px; height: 8px; background: var(--accent); border-radius: 50%;"></span>
+              <p class="scroll-reveal" style="font-weight: 500; color: var(--primary); font-size: 1.1rem; display: flex; align-items: center; gap: 1rem; transition-delay: 0.3s;">
                 Kantonal Vorstand SVP Nidwalden (Finanzen)
               </p>
               <div style="margin-top: 2rem;">
@@ -310,7 +308,9 @@
         <!-- Column 1: Info -->
         <div class="footer-col">
           <img src="logo%20white.png" alt="Daniel Meister" class="footer-logo">
-          <p class="footer-mission">Freiheit, Verantwortung und starke Werte &ndash; für ein sicheres und erfolgreiches Nidwalden.</p>
+          <div class="footer-affiliation">
+            <img src="SVP_NW_Favicon.png" alt="SVP Nidwalden">
+          </div>
         </div>
         
         <!-- Column 2: Navigation -->
@@ -332,9 +332,7 @@
           </p>
           <a href="mailto:daniel.meister@parl-nw.ch" class="footer-email">daniel.meister@parl-nw.ch</a>
           
-          <div class="footer-affiliation">
-            <img src="SVP_NW_Favicon.png" alt="SVP Nidwalden">
-          </div>
+
         </div>
       </div>
       

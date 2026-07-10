@@ -37,6 +37,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
+html, body {
+  width: 100%;
+}
+
 body {
   font-family: var(--font-main);
   background-color: var(--bg-color);
@@ -867,6 +871,16 @@ body.reveal-content .hero-content {
   transform: translateY(0);
 }
 
+.faint-to-dark {
+  opacity: 0.2 !important;
+  transform: none !important;
+  transition: opacity 1.5s ease !important;
+}
+
+.faint-to-dark.visible {
+  opacity: 1 !important;
+}
+
 /* Text Highlight Effect */
 .text-highlight {
   position: relative;
@@ -1636,41 +1650,23 @@ body.no-scroll .main-nav .logo-red {
 }
 
 @media (max-width: 768px) {
-  .story-wrapper {
-    height: auto !important; /* Natural height on mobile */
-    padding-bottom: 5rem;
-  }
-  .story-sticky {
-    position: relative !important;
-    height: auto !important;
-    top: 0 !important;
-    overflow: visible !important;
-  }
-  .story-ruler-container {
-    position: sticky !important;
-    top: 60px !important;
-    height: 70px !important;
-    z-index: 100;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-  }
-  .story-cards-container {
-    position: relative !important;
-    height: auto !important;
-    margin-top: 0 !important;
-  }
+  /* Re-enable sticky scrolling on mobile, but stack the inner card content vertically */
   .story-card {
-    position: relative !important;
-    height: auto !important;
-    transform: none !important;
-    opacity: 1 !important;
-    padding: 4rem 1.5rem !important;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-    background: #FFFFFF !important;
-    visibility: visible !important;
-    display: block !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    padding: 6rem 1.5rem 2rem 1.5rem !important; /* Extra top padding to clear ruler/nav */
   }
   .story-card-left {
-    margin-bottom: 1rem;
+    padding: 0 !important;
+    margin-bottom: 1.5rem;
+    flex: none !important;
+    width: 100% !important;
+  }
+  .story-card-right {
+    padding: 0 !important;
+    flex: none !important;
+    width: 100% !important;
   }
   .story-title { 
     font-size: 2rem; 
@@ -1752,7 +1748,7 @@ body.reveal-content .story-card.active .card-icon rect {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-color: var(--accent);
   display: flex;
@@ -1800,18 +1796,19 @@ body.reveal-content .story-card.active .card-icon rect {
 .preloader-text {
   display: flex;
   gap: 0.5rem;
-  font-family: var(--font-display);
+  font-family: var(--font-main);
   font-size: 0.95rem;
   letter-spacing: 3px;
+  text-transform: uppercase;
   color: #fff;
 }
 .preloader-text span {
   opacity: 0;
   transform: translateY(15px);
 }
-.preloader-text span:nth-child(1) { animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.9s forwards; }
-.preloader-text span:nth-child(2) { animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 1.05s forwards; }
-.preloader-text span:nth-child(3) { animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 1.2s forwards; }
+.preloader-text span:nth-child(1) { animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 1.0s forwards; }
+.preloader-text span:nth-child(2) { animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 1.5s forwards; }
+.preloader-text span:nth-child(3) { animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 2.0s forwards; }
 .preloader.slide-in {
   transform: translateY(100%);
   transition: none;
@@ -1826,7 +1823,7 @@ body.reveal-content .story-card.active .card-icon rect {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-color: var(--accent);
   z-index: 1000000;
@@ -1871,18 +1868,19 @@ body.reveal-content .story-card.active .card-icon rect {
 .preloader-text {
   display: flex;
   gap: 0.5rem;
-  font-family: var(--font-display);
+  font-family: var(--font-main);
   font-size: 0.95rem;
   letter-spacing: 3px;
+  text-transform: uppercase;
   color: #fff;
 }
 .preloader-text span {
   opacity: 0;
   transform: translateY(15px);
 }
-.preloader-text span:nth-child(1) { animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.2s forwards; }
-.preloader-text span:nth-child(2) { animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.4s forwards; }
-.preloader-text span:nth-child(3) { animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.6s forwards; }
+.preloader-text span:nth-child(1) { animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 1.0s forwards; }
+.preloader-text span:nth-child(2) { animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 1.5s forwards; }
+.preloader-text span:nth-child(3) { animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 2.0s forwards; }
 
 @keyframes fadeUp {
   0% { opacity: 0; transform: translateY(15px); }
@@ -1927,4 +1925,141 @@ body.reveal-content .story-card.active .card-icon rect {
   width: 100%;
   height: auto;
   display: block;
+}
+
+/* ==========================================================================
+   MOBILE OPTIMIZATION OVERRIDES
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Hero Image and Text Layout */
+  .hero {
+    background-position: 80% center !important; /* Shift image right to show the face */
+  }
+  .hero-content {
+    left: 1rem !important; /* Move text more to the left */
+    bottom: 3rem !important;
+    padding-right: 1rem !important;
+  }
+  .hero-title {
+    font-size: 3rem !important;
+    line-height: 1.1;
+  }
+  .hero-subtitle {
+    font-size: 1.3rem !important;
+  }
+  .hero-tagline {
+    font-size: 1.1rem !important;
+  }
+  .section-title {
+    font-size: 2.2rem !important;
+  }
+  p {
+    font-size: 1rem !important;
+  }
+
+  /* Spacing */
+  .section {
+    padding: 3rem 1rem !important;
+  }
+  
+  /* Grids */
+  .footer-content, .contact-wrapper, .about-content {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  
+  /* Force inline 1fr 1fr grids to stack */
+  div[style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Utility */
+  .text-highlight {
+    font-size: 2rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Scrollytelling overrides for Home */
+  .arclin-scroll-wrapper {
+    display: none !important;
+  }
+  .arclin-section-2 {
+    position: relative !important;
+    height: auto !important;
+    top: auto !important;
+    padding: 3rem 1.5rem !important;
+  }
+  .arclin-image-column {
+    display: none !important;
+  }
+  .arclin-slides-top {
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 3rem !important;
+  }
+  .arclin-slide-title {
+    position: relative !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    filter: none !important;
+    font-size: 1.8rem !important;
+  }
+  .arclin-slides-bottom {
+    display: none !important;
+  }
+
+  /* Footer fixes */
+  .footer-container {
+    padding: 3rem 1.5rem !important;
+  }
+  .footer-links {
+    margin-top: 2rem;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  /* Logo Sizes */
+  .logo-white, .logo-red {
+    height: 36px !important;
+  }
+  .footer-logo {
+    height: 48px !important;
+    width: auto !important;
+  }
+  
+  /* Button Size */
+  .btn, .arclin-btn {
+    padding: 0.7rem 1.2rem !important;
+    font-size: 0.75rem !important;
+  }
+  
+  /* Meine Politik Titles */
+  .story-card-left {
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+  .story-title {
+    text-align: left !important;
+  }
+  
+  /* Contact Page Large Text */
+  #kontakt-scroll-text {
+    font-size: 1.8rem !important;
+  }
+  
+  /* Intro Quotes */
+  .intro-quote {
+    font-size: 1.6rem !important;
+  }
+  
+  /* Section Spacing Overrides */
+  .politik-intro-container {
+    padding-top: 4rem !important;
+  }
 }

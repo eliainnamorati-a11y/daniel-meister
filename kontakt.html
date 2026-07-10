@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=44">
+    <link rel="icon" type="image/png" href="icon.png">
   </head>
   <body>
     <!-- Preloader -->
@@ -72,7 +73,7 @@
           
           <!-- Left Column: Big Text & Info -->
           <div class="contact-info scroll-reveal" style="padding: 0 2rem;">
-            <p style="font-family: var(--font-display); font-style: italic; font-size: 2.8rem; color: var(--primary); line-height: 1.2; margin-bottom: 3rem; margin-top: 2rem;">
+            <p id="kontakt-scroll-text" style="font-family: var(--font-display); font-size: 2.8rem; color: var(--primary); opacity: 0.2; line-height: 1.2; margin-bottom: 3rem; margin-top: 2rem;">
               «Haben Sie Fragen, Anliegen oder möchten Sie mehr über meine politische Arbeit erfahren? Ich freue mich auf Ihre Nachricht.»
             </p>
             
@@ -103,22 +104,22 @@
               <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
                 <div class="form-group">
                   <label for="name" style="display: block; margin-bottom: 0.8rem; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted);">Name</label>
-                  <input type="text" id="name" name="name" required placeholder="Ihr Name" style="width: 100%; padding: 1.2rem; background: white; border: 1px solid rgba(0,0,0,0.06); border-radius: 12px; font-family: inherit; font-size: 1rem; transition: all 0.3s ease;">
+                  <input type="text" id="name" name="name" required placeholder="Ihr Name" style="width: 100%; padding: 1.2rem; background: white; border: 1px solid rgba(0,0,0,0.06); border-radius: 0; font-family: inherit; font-size: 1rem; transition: all 0.3s ease;">
                 </div>
                 <div class="form-group">
                   <label for="email" style="display: block; margin-bottom: 0.8rem; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted);">E-Mail</label>
-                  <input type="email" id="email" name="email" required placeholder="ihre@email.ch" style="width: 100%; padding: 1.2rem; background: white; border: 1px solid rgba(0,0,0,0.06); border-radius: 12px; font-family: inherit; font-size: 1rem; transition: all 0.3s ease;">
+                  <input type="email" id="email" name="email" required placeholder="ihre@email.ch" style="width: 100%; padding: 1.2rem; background: white; border: 1px solid rgba(0,0,0,0.06); border-radius: 0; font-family: inherit; font-size: 1rem; transition: all 0.3s ease;">
                 </div>
               </div>
               <div class="form-group" style="margin-bottom: 2rem;">
                 <label for="subject" style="display: block; margin-bottom: 0.8rem; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted);">Betreff</label>
-                <input type="text" id="subject" name="subject" required placeholder="Worum geht es?" style="width: 100%; padding: 1.2rem; background: white; border: 1px solid rgba(0,0,0,0.06); border-radius: 12px; font-family: inherit; font-size: 1rem; transition: all 0.3s ease;">
+                <input type="text" id="subject" name="subject" required placeholder="Worum geht es?" style="width: 100%; padding: 1.2rem; background: white; border: 1px solid rgba(0,0,0,0.06); border-radius: 0; font-family: inherit; font-size: 1rem; transition: all 0.3s ease;">
               </div>
               <div class="form-group" style="margin-bottom: 3rem;">
                 <label for="message" style="display: block; margin-bottom: 0.8rem; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted);">Nachricht</label>
-                <textarea id="message" name="message" rows="6" required placeholder="Ihre Nachricht..." style="width: 100%; padding: 1.2rem; background: white; border: 1px solid rgba(0,0,0,0.06); border-radius: 12px; font-family: inherit; font-size: 1rem; resize: vertical; transition: all 0.3s ease;"></textarea>
+                <textarea id="message" name="message" rows="6" required placeholder="Ihre Nachricht..." style="width: 100%; padding: 1.2rem; background: white; border: 1px solid rgba(0,0,0,0.06); border-radius: 0; font-family: inherit; font-size: 1rem; resize: vertical; transition: all 0.3s ease;"></textarea>
               </div>
-              <button type="submit" class="btn btn-primary" style="width: 100%; height: 60px; border-radius: 12px; font-size: 1rem; letter-spacing: 3px;">
+              <button type="submit" class="btn btn-primary" style="width: 100%; height: 60px; border-radius: 0; font-size: 1rem; letter-spacing: 3px;">
                 Nachricht senden
               </button>
             </form>
@@ -137,7 +138,9 @@
         <!-- Column 1: Info -->
         <div class="footer-col">
           <img src="logo%20white.png" alt="Daniel Meister" class="footer-logo">
-          <p class="footer-mission">Freiheit, Verantwortung und starke Werte &ndash; für ein sicheres und erfolgreiches Nidwalden.</p>
+          <div class="footer-affiliation">
+            <img src="SVP_NW_Favicon.png" alt="SVP Nidwalden">
+          </div>
         </div>
         
         <!-- Column 2: Navigation -->
@@ -159,9 +162,7 @@
           </p>
           <a href="mailto:daniel.meister@parl-nw.ch" class="footer-email">daniel.meister@parl-nw.ch</a>
           
-          <div class="footer-affiliation">
-            <img src="SVP_NW_Favicon.png" alt="SVP Nidwalden">
-          </div>
+
         </div>
       </div>
       
