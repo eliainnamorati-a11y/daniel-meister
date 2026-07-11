@@ -39,6 +39,7 @@ h1, h2, h3, h4, h5, h6 {
 
 html, body {
   width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -227,8 +228,10 @@ body.reveal-content .main-nav {
   position: fixed;
   top: 0;
   left: 0;
+  bottom: 0;
   width: 100%;
   height: 100vh;
+  height: 100dvh;
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -1999,6 +2002,7 @@ body.reveal-content .story-card.active .card-icon rect {
   }
   .hero-content {
     left: 2rem !important; /* Move absolute text to match 2rem padding */
+    width: calc(100% - 4rem) !important; /* Prevent horizontal overflow */
     bottom: 3rem !important;
     padding: 0 !important;
     text-align: left !important;
