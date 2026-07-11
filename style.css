@@ -2038,7 +2038,9 @@ body.reveal-content .story-card.active .card-icon rect {
   }
   
   .contact-form-container {
-    padding: 3rem 1.5rem !important;
+    padding: 3rem 2rem !important;
+    margin: 0 -2rem !important;
+    border-radius: 0 !important;
   }
   
   /* Force inline 1fr 1fr grids to stack */
