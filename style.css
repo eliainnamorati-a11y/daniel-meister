@@ -2147,6 +2147,9 @@ body.reveal-content .story-card.active .card-icon rect {
     align-items: flex-start !important;
     text-align: left !important;
   }
+  .story-card-left .card-icon {
+    margin-bottom: 2rem !important;
+  }
   .story-title {
     text-align: left !important;
   }
