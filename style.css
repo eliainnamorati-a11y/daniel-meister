@@ -1755,8 +1755,8 @@ body.reveal-content .story-card.active .card-icon rect {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1803,12 +1803,14 @@ body.reveal-content .story-card.active .card-icon rect {
 }
 .preloader-text {
   display: flex;
-  gap: 0.5rem;
+  flex-wrap: nowrap;
+  gap: clamp(0.2rem, 1vw, 0.5rem);
   font-family: var(--font-main);
-  font-size: 0.95rem;
-  letter-spacing: 3px;
+  font-size: clamp(0.55rem, 3vw, 0.95rem);
+  letter-spacing: clamp(1px, 1vw, 3px);
   text-transform: uppercase;
   color: #fff;
+  white-space: nowrap;
 }
 .preloader-text span {
   opacity: 0;
