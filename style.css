@@ -2088,16 +2088,16 @@ body.reveal-content .story-card.active .card-icon rect {
 
   /* Footer fixes */
   .footer {
-    padding: 4rem 2rem 1rem 2rem !important;
+    padding: 2.5rem 1.5rem 1rem 1.5rem !important;
   }
   .footer-cta {
-    margin-bottom: 2rem !important;
+    margin-bottom: 1.5rem !important;
   }
   .footer-cta h2 {
-    font-size: 2rem !important;
+    font-size: 1.8rem !important;
   }
   .footer-container {
-    gap: 2rem !important;
+    gap: 1.5rem !important;
     padding: 0 !important;
   }
   .footer-col {
@@ -2106,11 +2106,14 @@ body.reveal-content .story-card.active .card-icon rect {
     align-items: center;
     text-align: center;
   }
+  .footer-logo, .footer-address, .footer-col h3 {
+    margin-bottom: 0.5rem !important;
+  }
   .footer-nav {
     flex-direction: row !important;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1.5rem !important;
+    gap: 1rem !important;
   }
   .footer-bottom {
     flex-direction: column;
