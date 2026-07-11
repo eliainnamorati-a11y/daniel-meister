@@ -2097,8 +2097,20 @@ body.reveal-content .story-card.active .card-icon rect {
     font-size: 2rem !important;
   }
   .footer-container {
-    gap: 2.5rem !important;
+    gap: 2rem !important;
     padding: 0 !important;
+  }
+  .footer-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-nav {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem !important;
   }
   .footer-bottom {
     flex-direction: column;
