@@ -2109,6 +2109,9 @@ body.reveal-content .story-card.active .card-icon rect {
   .footer-logo, .footer-address, .footer-col h3 {
     margin-bottom: 0.5rem !important;
   }
+  .footer-affiliation {
+    margin-top: 0.5rem !important;
+  }
   .footer-nav {
     flex-direction: row !important;
     flex-wrap: wrap;
