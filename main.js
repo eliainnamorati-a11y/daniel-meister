@@ -412,3 +412,28 @@ document.addEventListener('scroll', () => {
     contactText.style.opacity = 0.2 + (0.8 * progress);
   }
 });
+
+// Aktuelles Scrollytelling Logic
+document.addEventListener('scroll', () => {
+  const wrapper = document.getElementById('aktuelles-scroll-wrapper');
+  if (!wrapper) return;
+  
+  const rect = wrapper.getBoundingClientRect();
+  const wrapperHeight = wrapper.offsetHeight;
+  const windowHeight = window.innerHeight;
+  
+  const maxScroll = wrapperHeight - windowHeight;
+  let scrollProgress = -rect.top / maxScroll;
+  
+  if (scrollProgress > -0.2 && scrollProgress <= 1.2) {
+    const cards = wrapper.querySelectorAll('.aktuelles-card');
+    cards.forEach((card, index) => {
+      const threshold = 0.1 + (index * 0.3);
+      if (scrollProgress > threshold) {
+        card.classList.add('scroll-active');
+      } else {
+        card.classList.remove('scroll-active');
+      }
+    });
+  }
+});

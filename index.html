@@ -142,14 +142,15 @@
     </div>
 
     <!-- News Preview Section -->
-    <section class="section" style="background: var(--bg-color);">
+    <div class="aktuelles-scroll-wrapper" id="aktuelles-scroll-wrapper">
+      <section class="section aktuelles-sticky" style="background: var(--bg-color); position: sticky; top: 0; z-index: 10; height: 100vh; padding-top: 100px; overflow: hidden;">
       <div class="section-container">
-        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; position: sticky; top: 90px; background: var(--bg-color); z-index: 10; padding-top: 2rem; padding-bottom: 2rem; margin-top: -2rem;">
-          <h2 class="section-title scroll-reveal" style="margin-bottom: 0;">Aktuelles</h2>
-          <a href="aktuelles.html" class="btn btn-primary scroll-reveal">Alle Neuigkeiten</a>
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem;">
+          <h2 class="section-title" style="margin-bottom: 0; font-size: 2.5rem;">Aktuelles</h2>
+          <a href="aktuelles.html" class="btn btn-primary">Alle Neuigkeiten</a>
         </div>
         <div class="news-grid">
-          <a href="https://www.svp-nw.ch/medienmitteilungen/svp-ennetbuergen-mit-neuem-praesidenten-und-erneuertem-vorstand/" target="_blank" class="news-card scroll-reveal" style="transition-delay: 0.1s;">
+          <a href="https://www.svp-nw.ch/medienmitteilungen/svp-ennetbuergen-mit-neuem-praesidenten-und-erneuertem-vorstand/" target="_blank" class="news-card aktuelles-card" style="transition-delay: 0.1s;">
             <div class="news-image-wrapper">
               <div class="news-image" style="background-image: url('https://www.svp-nw.ch/wp-content/uploads/sites/42/GV-SVP-Ennetbuergen-Bild-1-1041x720.jpg');"></div>
             </div>
@@ -159,7 +160,7 @@
               <p class="news-source">SVP Nidwalden</p>
             </div>
           </a>
-          <a href="https://www.luzernerzeitung.ch/zentralschweiz/gemeinde/portrait-daniel-meister-nidwalden-wahlen-2026-landrat-ld.4117970" target="_blank" class="news-card scroll-reveal" style="transition-delay: 0.2s;">
+          <a href="https://www.luzernerzeitung.ch/zentralschweiz/gemeinde/portrait-daniel-meister-nidwalden-wahlen-2026-landrat-ld.4117970" target="_blank" class="news-card aktuelles-card" style="transition-delay: 0.2s;">
             <div class="news-image-wrapper">
               <div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1585829365295-ab7cd400c167?q=80&w=800&auto=format&fit=crop');"></div>
             </div>
@@ -169,7 +170,7 @@
               <p class="news-source">Luzerner Zeitung</p>
             </div>
           </a>
-          <a href="https://www.svp-nw.ch/artikel/klartext-daniel-meister-in-den-gemeinderat-ennetbuergen/" target="_blank" class="news-card scroll-reveal" style="transition-delay: 0.3s;">
+          <a href="https://www.svp-nw.ch/artikel/klartext-daniel-meister-in-den-gemeinderat-ennetbuergen/" target="_blank" class="news-card aktuelles-card" style="transition-delay: 0.3s;">
             <div class="news-image-wrapper">
               <div class="news-image" style="background-image: url('https://www.svp-nw.ch/wp-content/uploads/sites/42/KlartextDanielMeister-1.jpg');"></div>
             </div>
@@ -182,6 +183,7 @@
         </div>
       </div>
     </section>
+  </div>
 
     <!-- Footer -->
     <footer class="footer">

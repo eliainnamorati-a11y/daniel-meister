@@ -196,7 +196,6 @@ body.reveal-content .main-nav {
   background: #FFFFFF;
   position: relative;
   transition: all 0.3s;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .hamburger::before,
@@ -213,15 +212,15 @@ body.reveal-content .main-nav {
 .hamburger::before { top: -8px; }
 .hamburger::after { top: 8px; }
 
-/* Scrolled state: make it dark */
-.main-nav.scrolled .hamburger { background: var(--primary); }
+/* Scrolled state: make it red */
+.main-nav.scrolled .hamburger { background: var(--accent); }
 .main-nav.scrolled .hamburger::before,
-.main-nav.scrolled .hamburger::after { background: var(--primary); }
+.main-nav.scrolled .hamburger::after { background: var(--accent); }
 
-/* Active state (menu open): make it an X and ensure it is dark */
+/* Active state (menu open): make it an X and ensure it is red */
 .menu-toggle.active .hamburger { background: transparent !important; }
-.menu-toggle.active .hamburger::before { top: 0; transform: rotate(45deg); background: var(--primary); }
-.menu-toggle.active .hamburger::after { top: 0; transform: rotate(-45deg); background: var(--primary); }
+.menu-toggle.active .hamburger::before { top: 0; transform: rotate(45deg); background: var(--accent); }
+.menu-toggle.active .hamburger::after { top: 0; transform: rotate(-45deg); background: var(--accent); }
 
 /* Menu Overlay */
 .menu-overlay {
@@ -508,6 +507,7 @@ body.reveal-content .hero-content {
   position: relative;
   overflow: hidden;
   border-top: 1px solid rgba(255,255,255,0.05);
+  z-index: 20;
 }
 
 .footer-cta {
@@ -1505,7 +1505,7 @@ body.no-scroll .main-nav .logo-red {
     font-size: 0.7rem;
     top: 45px;
   }
-  .story-ruler-tick-label:nth-child(even) {
+  .story-ruler-tick-label:nth-child(odd) {
     display: none; /* Hide every second label on mobile to prevent overlap */
   }
 }
@@ -1570,10 +1570,15 @@ body.no-scroll .main-nav .logo-red {
 }
 .story-card-left {
   flex: 1;
-  padding: 4rem;
+  padding: 4rem 4rem 4rem 12vw;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.card-icon {
+  display: block;
+  margin-bottom: 1.5rem;
 }
 .story-title {
   font-family: var(--font-display);
@@ -1584,8 +1589,8 @@ body.no-scroll .main-nav .logo-red {
   letter-spacing: -0.01em;
 }
 .story-card-right {
-  flex: 1.5;
-  padding: 4rem 6rem 4rem 0;
+  flex: 1;
+  padding: 4rem 12vw 4rem 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1749,13 +1754,22 @@ body.reveal-content .story-card.active .card-icon rect {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
-  background-color: var(--accent);
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 999999;
   transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.preloader::before {
+  content: '';
+  position: absolute;
+  top: -50vh;
+  left: -50vw;
+  width: 200vw;
+  height: 200vh;
+  background-color: var(--accent);
+  z-index: -1;
 }
 .preloader.hidden {
   transform: translateY(-100%);
@@ -1927,6 +1941,54 @@ body.reveal-content .story-card.active .card-icon rect {
   display: block;
 }
 
+/* Aktuelles Scrollytelling Section */
+.aktuelles-scroll-wrapper {
+  height: 300vh;
+  position: relative;
+  background-color: var(--bg-color);
+}
+.aktuelles-card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease !important;
+}
+.aktuelles-card.scroll-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Force a standard 3-column grid for the sticky section to ensure it fits vertically */
+@media (min-width: 768px) {
+  .aktuelles-sticky .news-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 3rem !important;
+  }
+  .aktuelles-sticky .news-card {
+    padding-bottom: 0 !important;
+    border-bottom: 1px solid rgba(0,0,0,0.08) !important;
+  }
+  .aktuelles-sticky .news-card:first-child {
+    grid-column: span 1 !important;
+    display: flex !important;
+  }
+  .aktuelles-sticky .news-image-wrapper {
+    height: 240px !important;
+    min-height: auto !important;
+  }
+  .aktuelles-sticky .news-content {
+    padding: 2.5rem 0 2rem 0 !important;
+    justify-content: flex-start !important;
+  }
+  .aktuelles-sticky .news-title {
+    font-size: 1.6rem !important;
+    margin-bottom: 2rem !important;
+    line-height: 1.3 !important;
+  }
+  .aktuelles-sticky .news-date {
+    margin-bottom: 1.2rem !important;
+  }
+}
+
 /* ==========================================================================
    MOBILE OPTIMIZATION OVERRIDES
    ========================================================================== */
@@ -1936,9 +1998,10 @@ body.reveal-content .story-card.active .card-icon rect {
     background-position: 80% center !important; /* Shift image right to show the face */
   }
   .hero-content {
-    left: 1rem !important; /* Move text more to the left */
+    left: 2rem !important; /* Move absolute text to match 2rem padding */
     bottom: 3rem !important;
-    padding-right: 1rem !important;
+    padding: 0 !important;
+    text-align: left !important;
   }
   .hero-title {
     font-size: 3rem !important;
@@ -1959,7 +2022,7 @@ body.reveal-content .story-card.active .card-icon rect {
 
   /* Spacing */
   .section {
-    padding: 3rem 1rem !important;
+    padding: 4rem 2rem !important;
   }
   
   /* Grids */
@@ -1988,7 +2051,7 @@ body.reveal-content .story-card.active .card-icon rect {
     position: relative !important;
     height: auto !important;
     top: auto !important;
-    padding: 3rem 1.5rem !important;
+    padding: 4rem 2rem !important;
   }
   .arclin-image-column {
     display: none !important;
@@ -2012,16 +2075,24 @@ body.reveal-content .story-card.active .card-icon rect {
   }
 
   /* Footer fixes */
-  .footer-container {
-    padding: 3rem 1.5rem !important;
+  .footer {
+    padding: 4rem 2rem 1rem 2rem !important;
   }
-  .footer-links {
-    margin-top: 2rem;
+  .footer-cta {
+    margin-bottom: 2rem !important;
+  }
+  .footer-cta h2 {
+    font-size: 2rem !important;
+  }
+  .footer-container {
+    gap: 2.5rem !important;
+    padding: 0 !important;
   }
   .footer-bottom {
     flex-direction: column;
     text-align: center;
     gap: 1rem;
+    margin-top: 1rem;
   }
   
   /* Logo Sizes */
@@ -2061,5 +2132,20 @@ body.reveal-content .story-card.active .card-icon rect {
   /* Section Spacing Overrides */
   .politik-intro-container {
     padding-top: 4rem !important;
+  }
+  
+  /* Aktuelles Scrollytelling Mobile Fix */
+  .aktuelles-scroll-wrapper {
+    height: auto !important;
+  }
+  .aktuelles-sticky {
+    position: relative !important;
+    height: auto !important;
+    padding-top: 2rem !important;
+    overflow: visible !important;
+  }
+  .aktuelles-card {
+    opacity: 1 !important;
+    transform: none !important;
   }
 }
