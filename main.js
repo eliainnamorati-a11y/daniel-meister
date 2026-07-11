@@ -371,23 +371,16 @@ window.addEventListener('load', () => {
           preloaderContent.style.opacity = '0';
           setTimeout(() => {
             preloaderContent.style.display = 'none';
-          }, 300);
-        }
-        
-        setTimeout(() => {
-          if (signature) {
-            signature.classList.add('show');
-            signature.classList.add('draw');
-          }
-          
-          setTimeout(() => {
+            
+            // Immediately slide up the preloader
             preloader.classList.add('hidden');
             document.body.classList.add('reveal-content');
+            
             setTimeout(() => {
               preloader.style.display = 'none';
-            }, 600);
-          }, 900);
-        }, 450);
+            }, 800);
+          }, 300);
+        }
       }, 3200);
     }
   }
