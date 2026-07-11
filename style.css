@@ -1761,20 +1761,12 @@ body.reveal-content .story-card.active .card-icon rect {
   justify-content: center;
   align-items: center;
   z-index: 999999;
-  transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
-}
-.preloader::before {
-  content: '';
-  position: absolute;
-  top: -50vh;
-  left: -50vw;
-  width: 200vw;
-  height: 200vh;
   background-color: var(--accent);
-  z-index: -1;
+  transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+  will-change: transform;
 }
 .preloader.hidden {
-  transform: translateY(-100%);
+  transform: translate3d(0, -100%, 0);
 }
 
 /* Minimal Transition-Only Preloader for Subpages */
@@ -1826,11 +1818,12 @@ body.reveal-content .story-card.active .card-icon rect {
 .preloader-text span:nth-child(2) { animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 1.5s forwards; }
 .preloader-text span:nth-child(3) { animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 2.0s forwards; }
 .preloader.slide-in {
-  transform: translateY(100%);
+  transform: translate3d(0, 100%, 0);
   transition: none;
+  will-change: transform;
 }
 .preloader.slide-in.active {
-  transform: translateY(0);
+  transform: translate3d(0, 0, 0);
   transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
@@ -1843,11 +1836,12 @@ body.reveal-content .story-card.active .card-icon rect {
   height: 100vh;
   background-color: var(--accent);
   z-index: 1000000;
-  transform: translateY(100%);
+  transform: translate3d(0, 100%, 0);
   pointer-events: none;
+  will-change: transform;
 }
 .transition-curtain.active {
-  transform: translateY(0);
+  transform: translate3d(0, 0, 0);
   transition: transform 0.45s cubic-bezier(0.77, 0, 0.175, 1);
 }
 .preloader-content {
@@ -1996,8 +1990,11 @@ body.reveal-content .story-card.active .card-icon rect {
    ========================================================================== */
 @media (max-width: 768px) {
   /* Hero Image and Text Layout */
-  .hero {
+  #home.hero {
     background-position: 80% center !important; /* Shift image right to show the face */
+  }
+  .hero {
+    background-position: center 30% !important; /* Center on face for subpages */
   }
   .hero-content {
     left: 2rem !important; /* Move absolute text to match 2rem padding */
@@ -2007,14 +2004,16 @@ body.reveal-content .story-card.active .card-icon rect {
     text-align: left !important;
   }
   .hero-title {
-    font-size: 3rem !important;
-    line-height: 1.1;
+    font-size: clamp(2.2rem, 8vw, 3rem) !important;
+    line-height: 1.1 !important;
   }
   .hero-subtitle {
-    font-size: 1.3rem !important;
+    font-size: clamp(1.1rem, 5vw, 1.3rem) !important;
+    line-height: 1.3 !important;
   }
   .hero-tagline {
-    font-size: 1.1rem !important;
+    font-size: clamp(0.95rem, 4.5vw, 1.1rem) !important;
+    line-height: 1.4 !important;
   }
   .section-title {
     font-size: 2.2rem !important;
@@ -2032,6 +2031,14 @@ body.reveal-content .story-card.active .card-icon rect {
   .footer-content, .contact-wrapper, .about-content {
     grid-template-columns: 1fr !important;
     gap: 2rem !important;
+  }
+  
+  .contact-info {
+    padding: 0 !important;
+  }
+  
+  .contact-form-container {
+    padding: 3rem 1.5rem !important;
   }
   
   /* Force inline 1fr 1fr grids to stack */
