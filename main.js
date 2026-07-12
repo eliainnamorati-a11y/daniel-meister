@@ -297,7 +297,7 @@ document.addEventListener("DOMContentLoaded", () => {
         cardProgress = Math.max(0, Math.min(1, cardProgress));
         
         const yOffset = 100 - (cardProgress * 100);
-        card.style.transform = `translate3d(0, ${yOffset}vh, 0)`;
+        card.style.transform = `translateY(${yOffset}vh)`;
         
         if (cardProgress > 0.05) {
           card.classList.add('active');
