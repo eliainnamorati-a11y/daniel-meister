@@ -434,3 +434,16 @@ document.addEventListener('scroll', () => {
     });
   }
 });
+
+// Force auto-play for mobile videos
+document.addEventListener('DOMContentLoaded', () => {
+  const videos = document.querySelectorAll('video[autoplay]');
+  videos.forEach(v => {
+    v.play().catch(e => console.log('Autoplay prevented:', e));
+    
+    // Sometimes iOS needs a user interaction first, but touching the screen counts.
+    document.body.addEventListener('touchstart', () => {
+      if (v.paused) v.play();
+    }, { once: true });
+  });
+});

@@ -1764,7 +1764,8 @@ body.reveal-content .story-card.active .card-icon rect {
   justify-content: center;
   align-items: center;
   z-index: 999999;
-  background-color: var(--accent);
+  background-color: #c40305 !important; /* Fallback for iOS */
+  background-color: var(--accent) !important;
   transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
   will-change: transform;
 }
@@ -1774,7 +1775,8 @@ body.reveal-content .story-card.active .card-icon rect {
 
 /* Minimal Transition-Only Preloader for Subpages */
 .preloader.transition-only {
-  background-color: var(--accent);
+  background-color: #c40305 !important;
+  background-color: var(--accent) !important;
   transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
 }
 .preloader.transition-only .preloader-content {
@@ -1839,7 +1841,8 @@ body.reveal-content .story-card.active .card-icon rect {
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: var(--accent);
+  background-color: #c40305 !important;
+  background-color: var(--accent) !important;
   z-index: 1000000;
   transform: translate3d(0, 100%, 0);
   pointer-events: none;
@@ -2009,11 +2012,13 @@ body.reveal-content .story-card.active .card-icon rect {
     text-align: left !important;
   }
   .hero-title {
-    font-size: clamp(2.2rem, 8vw, 3rem) !important;
-    line-height: 1.1 !important;
+    font-size: clamp(1.8rem, 7vw, 2.5rem) !important;
+    line-height: 1.2 !important;
+    word-wrap: break-word;
+    hyphens: auto;
   }
   .hero-subtitle {
-    font-size: clamp(1.1rem, 5vw, 1.3rem) !important;
+    font-size: clamp(1rem, 5vw, 1.2rem) !important;
     line-height: 1.3 !important;
   }
   .hero-tagline {
