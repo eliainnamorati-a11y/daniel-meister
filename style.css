@@ -1771,12 +1771,14 @@ body.reveal-content .story-card.active .card-icon rect {
 }
 .preloader.hidden {
   transform: translate3d(0, -100%, 0);
+  visibility: hidden;
+  transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1), visibility 0s 0.8s;
 }
 
 /* Minimal Transition-Only Preloader for Subpages */
 .preloader.transition-only {
-  background-color: #c40305 !important;
-  background-color: var(--accent) !important;
+  background-color: #F8FAFC !important;
+  background-color: var(--bg-color) !important;
   transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
 }
 .preloader.transition-only .preloader-content {
@@ -1841,16 +1843,18 @@ body.reveal-content .story-card.active .card-icon rect {
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: #c40305 !important;
-  background-color: var(--accent) !important;
+  background-color: #F8FAFC !important;
+  background-color: var(--bg-color) !important;
   z-index: 1000000;
   transform: translate3d(0, 100%, 0);
   pointer-events: none;
-  will-change: transform;
+  visibility: hidden;
+  transition: transform 0.45s cubic-bezier(0.77, 0, 0.175, 1), visibility 0s 0.45s;
 }
 .transition-curtain.active {
   transform: translate3d(0, 0, 0);
-  transition: transform 0.45s cubic-bezier(0.77, 0, 0.175, 1);
+  visibility: visible;
+  transition: transform 0.45s cubic-bezier(0.77, 0, 0.175, 1), visibility 0s 0s;
 }
 .preloader-content {
   display: flex;
