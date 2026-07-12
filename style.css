@@ -1568,6 +1568,10 @@ body.no-scroll .main-nav .logo-red {
   background: var(--bg-color);
   transform: translateY(100vh); /* Start off-screen */
   box-shadow: 0 -30px 60px rgba(0,0,0,0.03); /* Subtle shadow on top edge */
+  visibility: hidden;
+}
+.story-card.active {
+  visibility: visible;
 }
 .story-card-left {
   flex: 1;

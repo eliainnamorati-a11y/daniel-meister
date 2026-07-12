@@ -299,8 +299,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const yOffset = 100 - (cardProgress * 100);
         card.style.transform = `translateY(${yOffset}vh)`;
         
-        if (cardProgress > 0.05) {
+        const nextEnd = (index + 1) / (numCards - 1);
+        
+        if (progress > start && progress < nextEnd) {
           card.classList.add('active');
+        } else if (index === numCards - 1 && progress > start) {
+          card.classList.add('active'); // Last card stays active
         } else {
           card.classList.remove('active');
         }
