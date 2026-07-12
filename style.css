@@ -1567,7 +1567,6 @@ body.no-scroll .main-nav .logo-red {
   display: flex;
   background: var(--bg-color);
   transform: translateY(100vh); /* Start off-screen */
-  will-change: transform;
   box-shadow: 0 -30px 60px rgba(0,0,0,0.03); /* Subtle shadow on top edge */
 }
 .story-card-left {
