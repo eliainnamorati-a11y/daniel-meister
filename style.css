@@ -543,6 +543,20 @@ body.reveal-content .hero-content {
   }
 }
 
+@media (min-width: 1024px) {
+  .footer-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+  }
+  .footer-col {
+    align-items: center;
+    text-align: center;
+  }
+  .footer-nav {
+    align-items: center;
+  }
+}
+
 .footer-col {
   display: flex;
   flex-direction: column;
