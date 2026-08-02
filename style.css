@@ -1857,8 +1857,8 @@ body.reveal-content .story-card.active .card-icon rect {
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: #F8FAFC !important;
-  background-color: var(--bg-color) !important;
+  background-color: #c40305 !important;
+  background-color: var(--accent) !important;
   z-index: 1000000;
   transform: translate3d(0, 100%, 0);
   pointer-events: none;
