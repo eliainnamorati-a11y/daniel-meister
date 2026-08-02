@@ -345,50 +345,55 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Preloader Logic
-window.addEventListener('load', () => {
+function hidePreloader() {
   const preloader = document.getElementById('preloader');
   const signature = document.getElementById('preloader-signature');
   const preloaderContent = document.querySelector('.preloader-content');
   
-  if (preloader) {
-    if (preloader.classList.contains('transition-only')) {
-      // Transition-only preloader for subpages: Show signature ONLY
+  if (!preloader || preloader.dataset.hidden) return;
+  preloader.dataset.hidden = 'true'; // ensure it only runs once
+  
+  if (preloader.classList.contains('transition-only')) {
+    // Transition-only preloader for subpages: Show signature ONLY
+    setTimeout(() => {
+      if (signature) {
+        signature.classList.add('show');
+        signature.classList.add('draw');
+      }
+      
       setTimeout(() => {
-        if (signature) {
-          signature.classList.add('show');
-          signature.classList.add('draw');
-        }
-        
+        preloader.classList.add('hidden');
+        document.body.classList.add('reveal-content');
         setTimeout(() => {
+          preloader.style.display = 'none';
+        }, 600);
+      }, 600); // Give the signature 0.6s to draw (faster)
+    }, 100);
+  } else {
+    // Full cinematic preloader for home page
+    setTimeout(() => {
+      if (preloaderContent) {
+        preloaderContent.style.transition = 'opacity 0.3s ease';
+        preloaderContent.style.opacity = '0';
+        setTimeout(() => {
+          preloaderContent.style.display = 'none';
+          
+          // Immediately slide up the preloader
           preloader.classList.add('hidden');
           document.body.classList.add('reveal-content');
+          
           setTimeout(() => {
             preloader.style.display = 'none';
-          }, 600);
-        }, 600); // Give the signature 0.6s to draw (faster)
-      }, 100);
-    } else {
-      // Full cinematic preloader for home page
-      setTimeout(() => {
-        if (preloaderContent) {
-          preloaderContent.style.transition = 'opacity 0.3s ease';
-          preloaderContent.style.opacity = '0';
-          setTimeout(() => {
-            preloaderContent.style.display = 'none';
-            
-            // Immediately slide up the preloader
-            preloader.classList.add('hidden');
-            document.body.classList.add('reveal-content');
-            
-            setTimeout(() => {
-              preloader.style.display = 'none';
-            }, 800);
-          }, 300);
-        }
-      }, 2500);
-    }
+          }, 800);
+        }, 300);
+      }
+    }, 1200); // reduced from 2500 for a much faster perceived load time
   }
-});
+}
+
+// Hide preloader when window loads, but also have a safety timeout of 2 seconds
+window.addEventListener('load', hidePreloader);
+setTimeout(hidePreloader, 2000);
 
 // Continuous scroll darken effect for contact text
 document.addEventListener('scroll', () => {
