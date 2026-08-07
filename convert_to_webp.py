@@ -1,5 +1,5 @@
 import os
-from PIL import Image
+from PIL import Image, ImageOps
 import glob
 
 def compress_image(file_path):
@@ -9,6 +9,7 @@ def compress_image(file_path):
         
     try:
         img = Image.open(file_path)
+        img = ImageOps.exif_transpose(img) # Fix EXIF rotation
         
         # Convert RGBA to RGB for webp/jpeg if necessary, though webp supports RGBA
         
