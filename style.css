@@ -1791,8 +1791,8 @@ body.reveal-content .story-card.active .card-icon rect {
 
 /* Minimal Transition-Only Preloader for Subpages */
 .preloader.transition-only {
-  background-color: #F8FAFC !important;
-  background-color: var(--bg-color) !important;
+  background-color: #c40305 !important;
+  background-color: var(--accent) !important;
   transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
 }
 .preloader.transition-only .preloader-content {
