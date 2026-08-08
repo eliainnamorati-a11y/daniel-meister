@@ -354,21 +354,14 @@ function hidePreloader() {
   preloader.dataset.hidden = 'true'; // ensure it only runs once
   
   if (preloader.classList.contains('transition-only')) {
-    // Transition-only preloader for subpages: Show signature ONLY
+    // Transition-only preloader for subpages: Hide after page loads + small buffer
     setTimeout(() => {
-      if (signature) {
-        signature.classList.add('show');
-        signature.classList.add('draw');
-      }
-      
+      preloader.classList.add('hidden');
+      document.body.classList.add('reveal-content');
       setTimeout(() => {
-        preloader.classList.add('hidden');
-        document.body.classList.add('reveal-content');
-        setTimeout(() => {
-          preloader.style.display = 'none';
-        }, 600);
-      }, 600); // Give the signature 0.6s to draw (faster)
-    }, 100);
+        preloader.style.display = 'none';
+      }, 600);
+    }, 600); // Give the signature time to finish drawing if the page loads too fast
   } else {
     // Full cinematic preloader for home page
     setTimeout(() => {
@@ -394,6 +387,16 @@ function hidePreloader() {
 // Hide preloader when window loads, but also have a safety timeout of 2 seconds
 window.addEventListener('load', hidePreloader);
 setTimeout(hidePreloader, 2000);
+
+// Start signature animation instantly on subpages without waiting for network load
+document.addEventListener('DOMContentLoaded', () => {
+  const preloader = document.getElementById('preloader');
+  const signature = document.getElementById('preloader-signature');
+  if (preloader && preloader.classList.contains('transition-only') && signature) {
+    signature.classList.add('show');
+    signature.classList.add('draw');
+  }
+});
 
 // Continuous scroll darken effect for contact text
 document.addEventListener('scroll', () => {
