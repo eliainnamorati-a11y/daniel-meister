@@ -545,15 +545,15 @@ body.reveal-content .hero-content {
 
 @media (min-width: 1024px) {
   .footer-container {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5rem;
+    grid-template-columns: 2.5fr 1fr 1fr;
+    gap: 3rem;
   }
   .footer-col {
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
   }
   .footer-nav {
-    align-items: center;
+    align-items: flex-start;
   }
 }
 
