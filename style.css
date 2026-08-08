@@ -1524,6 +1524,9 @@ body.no-scroll .main-nav .logo-red {
   .story-ruler-tick-label:nth-child(odd) {
     display: none; /* Hide every second label on mobile to prevent overlap */
   }
+  .story-ruler-tick-label:nth-last-child(2) {
+    display: none !important; /* Hide 2025 to prevent overlap with 2026 */
+  }
   .story-ruler-tick-label:last-child {
     display: block !important; /* Ensure the final year is always visible */
   }
