@@ -3,74 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Warum ich NEIN zum Planungskredit stimme | Daniel Meister</title>
+    <meta name="theme-color" content="#F8F9FA" />
     <meta name="description" content="Warum ich NEIN zum Planungskredit stimme, und wieso Ennetbürgen eine bessere Lösung verdient. Ein Beitrag von Daniel Meister, Landrat und Präsident SVP Ennetbürgen." />
-    <link rel="stylesheet" href="../style.css" />
-    <link rel="icon" type="image/png" href="../SVP_NW_Favicon.png" />
+    <title>Warum ich NEIN zum Planungskredit stimme | Daniel Meister</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css?v=46">
+    <link rel="icon" type="image/png" href="../icon.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="../icon.png">
+    <link rel="shortcut icon" href="../icon.png" type="image/x-icon">
     <style>
-      .article-hero {
-        min-height: 55vh;
-        background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)), url('../images/blogpost1.webp');
-        background-position: center 30%;
-        background-size: cover;
-        display: flex;
-        align-items: flex-end;
-        padding: 140px 10% 60px;
-        color: white;
-      }
-      .article-meta {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        margin-bottom: 20px;
-        font-size: 0.95rem;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        color: var(--accent-color, #e11d48);
-        font-weight: 700;
-      }
-      .article-meta span {
-        color: rgba(255, 255, 255, 0.7);
-        font-weight: 400;
-      }
-      .article-title {
-        font-family: 'hv-feliz', serif;
-        font-size: clamp(2.2rem, 4.5vw, 3.8rem);
-        line-height: 1.15;
-        max-width: 1000px;
-        margin-bottom: 15px;
-        font-weight: 400;
-        color: #ffffff;
-      }
       .article-container {
         max-width: 860px;
         margin: 0 auto;
         padding: 80px 24px 120px;
       }
       .article-lead {
+        font-family: var(--font-main);
         font-size: 1.35rem;
-        line-height: 1.7;
+        line-height: 1.75;
         font-weight: 500;
-        color: var(--primary-color, #0f172a);
+        color: var(--primary);
         margin-bottom: 40px;
         padding-bottom: 30px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
       }
       .article-body p {
+        font-family: var(--font-main);
         font-size: 1.15rem;
         line-height: 1.9;
-        color: #334155;
+        color: var(--text-main);
         margin-bottom: 28px;
         font-weight: 300;
       }
       .article-quote {
-        background: #f8fafc;
-        border-left: 4px solid #e11d48;
+        background: #f1f5f9;
+        border-left: 4px solid var(--accent);
         padding: 24px 30px;
         margin: 40px 0;
-        font-size: 1.2rem;
+        font-size: 1.25rem;
         line-height: 1.7;
-        color: #0f172a;
+        color: var(--primary);
         font-style: italic;
         border-radius: 0 8px 8px 0;
       }
@@ -91,14 +66,15 @@
         box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       }
       .author-info h4 {
-        font-family: 'hv-feliz', serif;
-        font-size: 1.4rem;
+        font-family: var(--font-display);
+        font-size: 1.6rem;
         margin-bottom: 6px;
-        color: #0f172a;
+        color: var(--primary);
       }
       .author-info p {
+        font-family: var(--font-main);
         font-size: 0.95rem;
-        color: #64748b;
+        color: var(--text-muted);
         margin: 0;
         line-height: 1.4;
       }
@@ -106,26 +82,51 @@
         display: inline-flex;
         align-items: center;
         gap: 10px;
-        margin-bottom: 40px;
         text-decoration: none;
-        color: #0f172a;
+        color: var(--primary);
         font-weight: 600;
         font-size: 0.95rem;
-        transition: transform 0.3s ease;
+        transition: transform 0.3s ease, color 0.3s ease;
       }
       .back-to-news:hover {
         transform: translateX(-5px);
-        color: #e11d48;
+        color: var(--accent);
+      }
+      @media (max-width: 768px) {
+        .hero-content {
+          padding: 0 1.5rem !important;
+        }
+        .article-container {
+          padding: 40px 20px 80px;
+        }
       }
     </style>
   </head>
   <body>
+    <!-- Preloader -->
+    <div id="preloader" class="preloader transition-only">
+      <div class="preloader-content">
+        <img src="../logo%20red.png" alt="Daniel Meister" class="preloader-logo">
+        <div class="preloader-line">
+          <div class="preloader-progress"></div>
+        </div>
+        <div class="preloader-text">
+          <span>DANIEL MEISTER</span>
+        </div>
+      </div>
+      <div class="preloader-signature-container" id="preloader-signature">
+        <img src="../daniel%20meister%20signature.svg" alt="Daniel Meister" class="preloader-signature-img">
+      </div>
+    </div>
+
     <!-- Navigation -->
-    <nav class="navbar solid">
+    <nav class="main-nav">
       <div class="nav-container">
         <a href="/" class="logo" style="display: flex; align-items: center;">
-          <img src="../logo%20red.png" alt="Daniel Meister" style="height: 56px; width: auto;">
+          <img src="../logo%20white.png" alt="Daniel Meister" class="logo-white" style="height: 56px; width: auto;">
+          <img src="../logo%20red.png" alt="Daniel Meister" class="logo-red" style="height: 56px; width: auto; display: none;">
         </a>
+        
         <div class="nav-links">
           <a href="../about">Wer bin ich?</a>
           <a href="../politik">Meine Politik</a>
@@ -138,21 +139,33 @@
       </div>
     </nav>
 
-    <!-- Article Hero Header -->
-    <header class="article-hero">
-      <div style="max-width: 1200px; margin: 0 auto; width: 100%;">
-        <a href="../aktuelles" class="back-to-news" style="color: rgba(255,255,255,0.85);">
-          ← Zurück zu Aktuelles
-        </a>
-        <div class="article-meta">
-          <span>Abstimmung Ennetbürgen</span> • <span>September 2026</span>
+    <!-- Fullscreen Menu Overlay -->
+    <div class="menu-overlay">
+      <div class="menu-content">
+        <a href="../about" class="menu-link" data-image="../images/IMG_2181.webp">Wer Bin Ich</a>
+        <a href="../politik" class="menu-link" data-image="../images/2S6A8463.webp">Meine Politik</a>
+        <a href="../aktuelles" class="menu-link" data-image="../images/2S6A8462.webp">Aktuelles</a>
+        <a href="../kontakt" class="menu-link" data-image="../images/IMG_2181.webp">Kontakt</a>
+      </div>
+      <img id="menu-hover-image" class="menu-hover-image" src="" alt="Daniel Meister">
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero" style="min-height: 65vh; background-image: linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.85)), url('../images/blogpost1.webp'); background-position: center 35%; background-size: cover; position: relative; display: flex; align-items: flex-end; padding-bottom: 4rem;">
+      <div class="hero-content scroll-reveal" style="padding: 0 4rem; text-align: left; max-width: 1400px; margin: 0 auto; width: 100%;">
+        <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 1.5rem; font-family: var(--font-main); font-size: 0.95rem; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); font-weight: 700;">
+          <span style="color: rgba(255, 255, 255, 0.85); font-weight: 400;">Abstimmung Ennetbürgen</span> • <span>September 2026</span>
         </div>
-        <h1 class="article-title">Warum ich NEIN zum Planungskredit stimme, und wieso Ennetbürgen eine bessere Lösung verdient</h1>
+        <h1 class="hero-title" style="color: white; -webkit-text-fill-color: white; font-family: var(--font-display); font-size: clamp(2.4rem, 4.5vw, 4.2rem); line-height: 1.15; max-width: 1100px; letter-spacing: -1px; margin-bottom: 0;">Warum ich NEIN zum Planungskredit stimme, und wieso Ennetbürgen eine bessere Lösung verdient</h1>
       </div>
     </header>
 
     <!-- Article Content -->
     <main class="article-container">
+      <div style="margin-bottom: 30px;">
+        <a href="../aktuelles" class="back-to-news">← Zurück zu Aktuelles</a>
+      </div>
+
       <div class="article-lead">
         Am 27. September stimmt Ennetbürgen über einen Planungskredit von 4,6 Millionen Franken ab, den ersten Schritt zu einem 77,8-Millionen-Projekt für die Erneuerung unserer Schulanlage. Gemeinsam mit der GLP und der SVP Ortspartei bitte ich Sie um ein NEIN. Nicht, weil wir keinen zusätzlichen Schulraum brauchen, sondern weil wir bisher nicht die Möglichkeit hatten, seriös zu prüfen, ob dies das richtige Projekt ist.
       </div>
@@ -176,7 +189,7 @@
 
         <p>Das alles bedeutet nicht, dass Ennetbürgen nicht in seine Schule investieren muss. Das muss es zweifellos. Aber ein NEIN am 27. September ist kein NEIN zu einer besseren Schule. Es ist die Forderung nach einem Projekt, das auch günstigere, gezieltere Alternativen geprüft hat, das der Bevölkerung von Anfang an ehrliche Zahlen zu den Steuerfolgen liefert und das uns allen genügend Zeit lässt, die Sache wirklich zu durchdenken.</p>
 
-        <p style="font-size: 1.25rem; font-weight: 500; color: #0f172a; margin-top: 35px;">Ich stimme am 27. September NEIN zum Planungskredit, und hoffe, Sie tun es mir gleich.</p>
+        <p style="font-size: 1.25rem; font-weight: 500; color: var(--primary); margin-top: 35px;">Ich stimme am 27. September NEIN zum Planungskredit, und hoffe, Sie tun es mir gleich.</p>
 
         <div class="author-box">
           <img src="../images/wer%20bin%20ich.webp" alt="Daniel Meister" class="author-avatar">
