@@ -93,11 +93,61 @@
         color: var(--accent);
       }
       @media (max-width: 768px) {
+        .main-nav {
+          height: 70px !important;
+          padding: 0 1.25rem !important;
+        }
+        .main-nav.scrolled {
+          height: 60px !important;
+        }
+        .logo-white, .logo-red {
+          height: 38px !important;
+        }
+        header.hero {
+          min-height: auto !important;
+          padding-top: 100px !important;
+          padding-bottom: 2.5rem !important;
+        }
         .hero-content {
-          padding: 0 1.5rem !important;
+          padding: 0 1.25rem !important;
+          position: relative !important;
+          left: 0 !important;
+          width: 100% !important;
+          bottom: 0 !important;
+        }
+        .hero-title {
+          font-size: clamp(1.75rem, 6.5vw, 2.3rem) !important;
+          line-height: 1.22 !important;
         }
         .article-container {
-          padding: 40px 20px 80px;
+          padding: 35px 1.25rem 70px !important;
+        }
+        .article-lead {
+          font-size: 1.15rem !important;
+          line-height: 1.65 !important;
+          margin-bottom: 25px !important;
+          padding-bottom: 20px !important;
+        }
+        .article-body p {
+          font-size: 1.05rem !important;
+          line-height: 1.75 !important;
+          margin-bottom: 20px !important;
+        }
+        .article-quote {
+          padding: 16px 18px !important;
+          font-size: 1.05rem !important;
+          margin: 25px 0 !important;
+        }
+        .author-box {
+          padding: 20px !important;
+          gap: 15px !important;
+        }
+        .author-avatar {
+          width: 65px !important;
+          height: 65px !important;
+        }
+        .author-info h4 {
+          font-size: 1.3rem !important;
         }
       }
     </style>
